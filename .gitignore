@@ -1,0 +1,7 @@
+portfolio01.sublime-project
+portfolio01.sublime-workspace
+_dev/
+build/
+node_modules/
+app/bower_components/
+.bowerrc
