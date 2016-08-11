@@ -10,31 +10,30 @@ var gulp = require('gulp'),
 	ngannotate = require('gulp-ng-annotate');
 
 var path = {
-	root: './build/',
+	root: './',
 	build: './build/**/*',
 	index: './app/index.html',
-	scss: './app/scss/*.scss', 
+	scss: './app/scss/**/*.scss', 
 	css: '.app/css/*.css',
 	copy: [
 		'./app/views/**/*.html',
-		'./app/scripts/**/*.json',
 		'!./app/index.html'
 	]
 };
 
-gulp.task('server', function() { //OK
+gulp.task('server', function() {
   connect.server({
-    root: './',
+    root: path.root,
     livereload: true
   });
 });
 
-gulp.task('clean', function () { //OK
+gulp.task('clean', function () {
 	return gulp.src(path.build, {read: false})
 		.pipe(clean());
 });
 
-gulp.task('sass', ['clean'], function () { //OK
+gulp.task('sass', ['clean'], function () {
   return gulp.src(path.scss)
     .pipe(sass())
     .pipe(autoprefixer({
@@ -47,8 +46,8 @@ gulp.task('sass', ['clean'], function () { //OK
 gulp.task('copy', ['sass'], function() { //OK
   gulp.src( './app/views/**/*.html')
     .pipe( gulp.dest('./build/views/'));
-  gulp.src( './app/scripts/**/*.json')
-    .pipe( gulp.dest('./build/scripts/'));  
+  // gulp.src( './app/scripts/**/*.json')
+  //   .pipe( gulp.dest('./build/scripts/'));  
 });
 
 gulp.task('usemin', ['copy'], function() { //OK
@@ -61,7 +60,6 @@ gulp.task('usemin', ['copy'], function() { //OK
       // inlinecss: [ cssmin(), 'concat' ]
     }))
     .pipe(gulp.dest('build/'));
-    // .pipe(connect.reload());
 });
 
 gulp.task('reload', ['sass'], function() {
