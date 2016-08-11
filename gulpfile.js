@@ -1,13 +1,13 @@
 var gulp = require('gulp'),
-	clean = require('gulp-clean'), // Remove files and folders
-	connect = require('gulp-connect'), // Run a webserver with livereload on default port:8080
-	sass = require('gulp-sass'), // Compile Sass
-	autoprefixer = require('gulp-autoprefixer'), // Prefix CSS
-	cssmin = require('gulp-clean-css'), // Minify CSS
-	usemin = require('gulp-usemin'), // Replaces references to scripts or stylesheets in HTML
+	clean = require('gulp-clean'),
+	connect = require('gulp-connect'),
+	sass = require('gulp-sass'),
+	autoprefixer = require('gulp-autoprefixer'),
+	cssmin = require('gulp-clean-css'),
+	usemin = require('gulp-usemin'),
 	uglify = require('gulp-uglify'),
 	htmlmin = require('gulp-htmlmin'),
-	ngannotate = require('gulp-ng-annotate'); //ng-annotate adds and removes AngularJS dependency injection annotations
+	ngannotate = require('gulp-ng-annotate');
 
 var path = {
 	root: './build/',
