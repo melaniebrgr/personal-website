@@ -7,17 +7,18 @@ var gulp = require('gulp'),
 	usemin = require('gulp-usemin'),
 	uglify = require('gulp-uglify'),
 	htmlmin = require('gulp-htmlmin'),
-	ngannotate = require('gulp-ng-annotate');
+	ngannotate = require('gulp-ng-annotate'),
+  gulpSequence = require('gulp-sequence'); 
 
 var path = {
 	root: './',
 	build: './build/**/*',
 	index: './app/index.html',
-	scss: './app/scss/**/*.scss', 
-	css: '.app/css/*.css',
-	copy: [
-		'./app/views/**/*.html',
-		'!./app/index.html'
+	scss: './app/sass/**/*.scss', 
+	css: './app/css/',
+	copySass: [
+		'./app/bower_components/normalize-scss/sass/**/*.scss',
+    './app/bower_components/meyer-reset/stylesheets/_meyer-reset.scss'
 	]
 };
 
@@ -33,24 +34,29 @@ gulp.task('clean', function () {
 		.pipe(clean());
 });
 
-gulp.task('sass', ['clean'], function () {
+gulp.task('sass', function () {
   return gulp.src(path.scss)
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['> 20%'],
       cascade: false
     }))
-    .pipe(gulp.dest('./app/css/'));
+    .pipe(gulp.dest(path.css));
 });
 
-gulp.task('copy', ['sass'], function() { //OK
-  gulp.src( './app/views/**/*.html')
+gulp.task('copy', function() {
+  gulp.src('./app/views/**/*.html')
     .pipe( gulp.dest('./build/views/'));
   // gulp.src( './app/scripts/**/*.json')
   //   .pipe( gulp.dest('./build/scripts/'));  
 });
 
-gulp.task('usemin', ['copy'], function() { //OK
+gulp.task('copySass', function() {
+  gulp.src( path.copySass)
+    .pipe( gulp.dest('./app/sass/'));
+});
+
+gulp.task('usemin', function() {
   return gulp.src(path.index)
     .pipe(usemin({
       css: [ cssmin() ],
@@ -62,14 +68,14 @@ gulp.task('usemin', ['copy'], function() { //OK
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('reload', ['sass'], function() {
+gulp.task('reload', function() {
   gulp.src('./app/**/*')
     .pipe(connect.reload());
 });
 
-gulp.task('watch', ['sass'], function() { //OK
-  gulp.watch('./app/**/*', ['reload']);
+gulp.task('watch', function() {
+  gulp.watch( './app/**/*', ['reload']);
 });
 
-gulp.task('default', ['server', 'watch']);
-gulp.task('build', ['usemin']);
+gulp.task('default', gulpSequence( 'copySass', 'sass', 'server', 'reload', 'watch'));
+// gulp.tast('build', gulpSequence( 'clean', 'sass', 'copy', 'usemin'));
