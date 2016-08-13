@@ -1,0 +1,13 @@
+// Media querie variables
+$sm-ish: 350px;
+$md-ish: 700px;
+$lg-ish: 1400px;
+
+// Colour variables
+$accent-1: #f66167; //coral
+
+// General mixins
+@mixin show {
+	border: 1px solid red;
+	background-color: rgba(1,0,0,0.25);
+}
