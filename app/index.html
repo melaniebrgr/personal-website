@@ -9,10 +9,11 @@
         <link rel="stylesheet" href="/app/css/app.css">
     </head>
     <body>
+
     	<div class="content">
     		<header>
-    			<nav>
-    				<div class="logo"></div>
+    			<div class="logo">{{Logo}}</div>
+          <nav class="nav">
     				<ul>
     					<li><a href="#">Front-End Web Development</a></li>
     					<li><a href="#">Design &amp; Visual Communication</a></li>
@@ -25,20 +26,22 @@
     		<section>
     			<div class="feature">
     				<canvas></canvas>
-    				<h2></h2>
+    				<h2 class="quote">{{Quote: Fabulas nominavi usu ei. Quo novum error mandamus eu, novum aliquid argumentum est eu. Vix quando epicuri complectitur cu.}}</h2>
     			</div>
-    			<article></article>
+    			<article>{{Article}}</article>
     		</section>
-    		<footer>
-    			<div class="headshot"></div>
-    			<ul>
-    				<li><a href="#">email</a></li>
-    				<li><a href="#">twitter</a></li>
-    				<li><a href="#">github</a></li>
-    				<li><a href="#">codepen</a></li>
-    				<li><a href="#">behance</a></li>
-    			</ul>
-    		</footer>
     	</div>
+
+      <footer class="footer">
+          <div class="headshot">{{Headshot}}</div>
+          <ul class="social-media">
+            <li><a href="#">email</a></li>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="#">codepen</a></li>
+            <li><a href="#">behance</a></li>
+          </ul>
+      </footer> 
+
     </body>
 </html>
