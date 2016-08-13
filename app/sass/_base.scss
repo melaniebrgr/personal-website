@@ -5,9 +5,14 @@ $lg-ish: 1400px;
 
 // Colour variables
 $accent-1: #f66167; //coral
+$light-neutral: #FBFBFA;
 
 // General mixins
 @mixin show {
-	border: 1px solid red;
-	background-color: rgba(1,0,0,0.25);
+	border: 1px solid blue;
+	background-color: rgba(0,0,0,0.25);
 }
+
+// .content {
+// 	background-color: bisque !important;
+// }
