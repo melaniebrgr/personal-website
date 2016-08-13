@@ -425,3 +425,73 @@ optgroup {
      */
 textarea {
   overflow: auto; }
+
+html {
+  box-sizing: border-box;
+  font-size: 16px; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+html,
+body {
+  height: 100%; }
+
+.content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100%; }
+  .content header {
+    flex-basis: 30%;
+    text-align: right; }
+  .content section {
+    flex-basis: 65%; }
+
+.logo {
+  height: 22em; }
+
+.feature {
+  position: relative; }
+  .feature canvas {
+    height: 22em;
+    width: 100%; }
+  .feature .quote {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%); }
+
+.footer {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 2rem; }
+  .footer .headshot,
+  .footer .social-media,
+  .footer .social-media li {
+    display: inline-block;
+    vertical-align: middle; }
+
+@media screen and (max-width: 700px) {
+  .content {
+    flex-direction: column;
+    justify-content: flex-start; }
+    .content header {
+      text-align: left; }
+  .logo {
+    height: initial; }
+  .nav li {
+    display: inline-block; }
+  .feature,
+  .feature canvas {
+    height: 12em;
+    overflow: auto; } }
+
+@media screen and (max-width: 350px) {
+  .feature {
+    display: none; } }
