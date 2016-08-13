@@ -74,6 +74,7 @@ gulp.task('reload', function() {
 });
 
 gulp.task('watch', function() {
+  gulp.watch( path.scss, ['sass'])
   gulp.watch( './app/**/*', ['reload']);
 });
 
