@@ -505,11 +505,17 @@ body {
   .feature {
     display: none; } }
 
+.logo svg {
+  width: 26%;
+  position: relative;
+  left: -231px;
+  top: 265px;
+  stroke: black; }
+
 .feature canvas {
   background-color: #f66167;
   background: linear-gradient(to top, #f24665 0%, #f66167 100%); }
 
 .feature .quote {
-  color: #fff;
-  font-size: 1.8rem;
-  text-shadow: 0 0 2px #f90b62; }
+  color: #f6f6ef;
+  font-size: 2rem; }
