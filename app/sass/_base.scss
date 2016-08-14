@@ -5,7 +5,12 @@ $lg-ish: 1400px;
 
 // Colour variables
 $accent-1: #f66167; //coral
-$light-neutral: #FBFBFA;
+$light-neutral-1: #fbfbfa; //very pale beige
+$light-neutral-2: #f6f6ef; //pale beige
+
+// Font stack variables
+$serif-1: Georgia, "Times New Roman", serif;
+$sans-serif-1: Avenir, Helvetica, Arial, sans-serif;
 
 // General mixins
 @mixin show {
@@ -13,6 +18,15 @@ $light-neutral: #FBFBFA;
 	background-color: rgba(0,0,0,0.25);
 }
 
-// .content {
-// 	background-color: bisque !important;
-// }
+// Project-wide base styles
+html {
+	font-family: $sans-serif-1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $serif-1;
+}
+
+body {
+	background-color: $light-neutral-2;
+}
