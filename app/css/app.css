@@ -470,9 +470,10 @@ body {
     width: 100%; }
   .feature .quote {
     display: inline-block;
+    left: 50%;
+    min-width: 80%;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translateY(-50%) translateX(-50%); }
 
 .footer {
@@ -503,3 +504,12 @@ body {
 @media screen and (max-width: 350px) {
   .feature {
     display: none; } }
+
+.feature canvas {
+  background-color: #f66167;
+  background: linear-gradient(to top, #f24665 0%, #f66167 100%); }
+
+.feature .quote {
+  color: #fff;
+  font-size: 1.8rem;
+  text-shadow: 0 0 2px #f90b62; }

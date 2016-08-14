@@ -1,0 +1,11 @@
+.feature {
+	canvas {
+		background-color: $accent-1;
+		background: linear-gradient(to top, #f24665 0%,#f66167 100%);
+	}
+	.quote {
+		color: $white;
+		font-size: 1.8rem;
+		text-shadow: 0 0 2px $accent-3;
+	}
+}
