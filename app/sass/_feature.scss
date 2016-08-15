@@ -1,11 +1,16 @@
 .feature {
 	canvas {
-		background-color: $accent-1;
-		background: linear-gradient(to top, #f24665 0%,#f66167 100%);
+		background-color: $mid-1;
+		background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
 	}
 	.quote {
-		color: $white;
-		font-size: 1.8rem;
-		text-shadow: 0 0 2px $accent-3;
+		h2 {
+			color: $dark-1;
+			font-size: 2rem;
+		}
+		footer {
+			font-size: 1rem;
+			text-align: right;
+		}
 	}
 }

@@ -5,12 +5,15 @@ $lg-ish: 1400px;
 
 // Colour variables
 $white: #fff;
-$accent-1: #f66167; //coral
-$accent-2: #f24665; //red
-$accent-3: #f90b62; //magenta
-$light-neutral-1: #fbfbfa; //very pale beige
-$light-neutral-2: #f6f6ef; //pale beige
-$dark-neutral-1: #35353a; //dark grey
+$black: #000;
+
+$light-1: #f1f2f3; //warm off-white (background)
+$mid-1: #e9e2e3; //warm taupe (feature bkgd)
+$mid-2: #dee1e4; //cool gray (feature bkgd)
+$dark-1: #36393c; //dark cool grey (text)
+
+$accent-1: #f66167; //coral (logo)
+$accent-2: #f24665; //red (logo)
 
 // Font stack variables
 $serif-1: Georgia, "Times New Roman", serif;
@@ -32,5 +35,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-	background-color: $light-neutral-2;
+	background-color: $light-1;
 }

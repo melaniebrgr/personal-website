@@ -1,0 +1,22 @@
+$padding-li: 15px;
+
+.nav {
+	font-size: 1.3rem;
+	font-weight: 100;
+	padding: 38px 0;
+	li {
+		background-color: $light-1;
+		padding: $padding-li 30px $padding-li 0;
+		transition: all 400ms ease-in-out;
+		&:hover {
+			background-color: $mid-2;
+		}
+	}
+	a {
+		color: $dark-1;
+		text-decoration: none;
+		&:hover {
+			color: $black;
+		}
+	}
+}
