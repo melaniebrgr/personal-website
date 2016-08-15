@@ -8,14 +8,16 @@ $padding-li: 15px;
 		background-color: $light-1;
 		padding: $padding-li 30px $padding-li 0;
 		transition: all 400ms ease-in-out;
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $mid-2;
 		}
 	}
 	a {
 		color: $dark-1;
 		text-decoration: none;
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $black;
 		}
 	}

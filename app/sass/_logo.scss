@@ -3,6 +3,12 @@
     width: 60px;
     position: absolute;
     left: 30px;
-    top: 30px;	
+    top: 30px;
+    filter: drop-shadow(0 9px 15px rgba($accent-1, 0.7));
+    transition: filter 200ms ease-in-out;
+    &:hover {
+    	cursor: pointer;
+    	filter: drop-shadow(0 9px 15px rgba($accent-1, 1));
+    }
   }
 }

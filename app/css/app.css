@@ -509,7 +509,16 @@ body {
   width: 60px;
   position: absolute;
   left: 30px;
-  top: 30px; }
+  top: 30px;
+  -webkit-filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
+  filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
+  transition: -webkit-filter 200ms ease-in-out;
+  transition: filter 200ms ease-in-out;
+  transition: filter 200ms ease-in-out, -webkit-filter 200ms ease-in-out; }
+  .logo svg:hover {
+    cursor: pointer;
+    -webkit-filter: drop-shadow(0 9px 15px #f66167);
+    filter: drop-shadow(0 9px 15px #f66167); }
 
 .nav {
   font-size: 1.3rem;
@@ -519,17 +528,17 @@ body {
     background-color: #f1f2f3;
     padding: 15px 30px 15px 0;
     transition: all 400ms ease-in-out; }
-    .nav li:hover {
+    .nav li:hover, .nav li:focus {
       background-color: #dee1e4; }
   .nav a {
     color: #36393c;
     text-decoration: none; }
-    .nav a:hover {
+    .nav a:hover, .nav a:focus {
       color: #000; }
 
 .feature canvas {
-  background-color: #e9e2e3;
-  background: linear-gradient(to bottom, #e9e2e3 0%, #dee1e4 100%); }
+  background-color: #eae6e7;
+  background: linear-gradient(to bottom, #eae6e7 0%, #dee1e4 100%); }
 
 .feature .quote h2 {
   color: #36393c;
