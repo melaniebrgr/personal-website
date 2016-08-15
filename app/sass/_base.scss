@@ -19,6 +19,10 @@ $accent-2: #f24665; //red (logo)
 $serif-1: Georgia, "Times New Roman", serif;
 $sans-serif-1: Avenir, Helvetica, Arial, sans-serif;
 
+// transitions
+$short-trns: 200ms;
+$easing: ease-in-out;
+
 // General mixins
 @mixin show {
 	border: 1px solid blue;

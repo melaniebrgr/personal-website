@@ -455,8 +455,7 @@ body {
   justify-content: center;
   min-height: 100%; }
   .content header {
-    flex-basis: 30%;
-    text-align: right; }
+    flex-basis: 30%; }
   .content section {
     flex-basis: 65%; }
 
@@ -506,10 +505,8 @@ body {
     display: none; } }
 
 .logo svg {
+  margin-top: 30px;
   width: 60px;
-  position: absolute;
-  left: 30px;
-  top: 30px;
   -webkit-filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
   filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
   transition: -webkit-filter 200ms ease-in-out;
@@ -520,14 +517,19 @@ body {
     -webkit-filter: drop-shadow(0 9px 15px #f66167);
     filter: drop-shadow(0 9px 15px #f66167); }
 
+@media screen and (max-width: 700px) {
+  .logo {
+    text-align: center; } }
+
 .nav {
   font-size: 1.3rem;
   font-weight: 100;
-  padding: 38px 0; }
+  padding: 38px 0;
+  text-align: right; }
   .nav li {
     background-color: #f1f2f3;
     padding: 15px 30px 15px 0;
-    transition: all 400ms ease-in-out; }
+    transition: all 200ms ease-in-out; }
     .nav li:hover, .nav li:focus {
       background-color: #dee1e4; }
   .nav a {
