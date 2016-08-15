@@ -493,8 +493,6 @@ body {
       text-align: left; }
   .logo {
     height: initial; }
-  .nav li {
-    display: inline-block; }
   .feature,
   .feature canvas {
     height: 12em;
@@ -538,6 +536,12 @@ body {
     .nav a:hover, .nav a:focus {
       color: #000; }
 
+@media screen and (max-width: 700px) {
+  .nav {
+    text-align: center; }
+    .nav li {
+      padding: 15px 30px 15px 30px; } }
+
 .feature canvas {
   background-color: #eae6e7;
   background: linear-gradient(to bottom, #eae6e7 0%, #dee1e4 100%); }
@@ -549,3 +553,7 @@ body {
 .feature .quote footer {
   font-size: 1rem;
   text-align: right; }
+
+@media screen and (max-width: 700px) {
+  .feature .quote h2 {
+    font-size: 1.6rem; } }

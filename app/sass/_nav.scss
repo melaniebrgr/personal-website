@@ -23,3 +23,12 @@ $padding-li: 15px;
 		}
 	}
 }
+
+@media screen and (max-width: $md-ish) {
+	.nav {
+		text-align: center;
+		li {
+			padding: $padding-li 30px $padding-li 30px;
+		}
+	}
+}

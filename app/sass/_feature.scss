@@ -14,3 +14,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: $md-ish) { 
+	.feature {
+		.quote h2 {
+			font-size: 1.6rem;
+		}		
+	}
+}
