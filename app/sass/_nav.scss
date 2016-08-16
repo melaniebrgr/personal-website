@@ -6,21 +6,31 @@ $padding-li: 15px;
 	padding: 38px 0;
 	text-align: right;
 	li {
-		background-color: $light-1;
+		list-style: none;
+	}
+	a {
+		// background-color: $light-1;
+		color: $dark-1;
+		display: block;
 		padding: $padding-li 30px $padding-li 0;
+		text-decoration: none;
 		transition: all $short-trns $easing;
 		&:hover,
 		&:focus {
-			background-color: $mid-2;
+			// background-color: $mid-2;
+			// color: $black;
+			color: $accent-1;
 		}
 	}
-	a {
-		color: $dark-1;
-		text-decoration: none;
-		&:hover,
-		&:focus {
-			color: $black;
-		}
+}
+
+.nav_sub {
+	display: none;
+	li {
+		border-top: 1px solid $mid-2;
+	}
+	&.open {
+		display: block;
 	}
 }
 

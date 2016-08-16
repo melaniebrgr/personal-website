@@ -504,7 +504,7 @@ body {
 
 .logo svg {
   margin-top: 30px;
-  width: 60px;
+  width: 65px;
   -webkit-filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
   filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
   transition: -webkit-filter 200ms ease-in-out;
@@ -525,16 +525,22 @@ body {
   padding: 38px 0;
   text-align: right; }
   .nav li {
-    background-color: #f1f2f3;
-    padding: 15px 30px 15px 0;
-    transition: all 200ms ease-in-out; }
-    .nav li:hover, .nav li:focus {
-      background-color: #dee1e4; }
+    list-style: none; }
   .nav a {
     color: #36393c;
-    text-decoration: none; }
+    display: block;
+    padding: 15px 30px 15px 0;
+    text-decoration: none;
+    transition: all 200ms ease-in-out; }
     .nav a:hover, .nav a:focus {
-      color: #000; }
+      color: #f66167; }
+
+.nav_sub {
+  display: none; }
+  .nav_sub li {
+    border-top: 1px solid #dee1e4; }
+  .nav_sub.open {
+    display: block; }
 
 @media screen and (max-width: 700px) {
   .nav {
@@ -543,8 +549,8 @@ body {
       padding: 15px 30px 15px 30px; } }
 
 .feature canvas {
-  background-color: #eae6e7;
-  background: linear-gradient(to bottom, #eae6e7 0%, #dee1e4 100%); }
+  background-color: #dee1e4;
+  background: linear-gradient(to bottom, #e9e7e8 0%, #dee1e4 100%); }
 
 .feature .quote h2 {
   color: #36393c;
