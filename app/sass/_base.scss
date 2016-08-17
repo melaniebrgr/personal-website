@@ -22,7 +22,8 @@ $sans-serif-1: Avenir, Helvetica, Arial, sans-serif;
 
 // transitions
 $short-trns: 200ms;
-$easing: ease-in-out;
+$long-trns: 600ms;
+$easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 
 // General mixins
 @mixin show {

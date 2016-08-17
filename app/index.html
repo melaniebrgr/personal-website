@@ -6,7 +6,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/app/css/app.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="bower_components/jQuery/dist/jquery.js"></script>
     </head>
     <body>
 
@@ -15,17 +16,26 @@
     			<div class="logo"><svg id="path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300"><defs><linearGradient id="linear-gradient" x1="150.5" y1="0.907" x2="150.5" y2="300.907" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f16267"/><stop offset="1" stop-color="#ef4765"/></linearGradient></defs><title>logoArtboard 1</title><polygon points="300.5 300 0.5 300 0.5 0 150.5 112.5 300.5 0 300.5 300" fill="url(#linear-gradient)"/></svg></div>
           <nav class="nav">
     				<ul>
-    					<li><a href="#">Front-End Web Development</a></li>
+    					<li class="nav_sub"><a href="#">Front-End Web Development</a></li>
               <li>
-                <ul class="nav_sub">
+                <ul>
                   <li><a href="#">GCTAvatar</a></li>
                   <li><a href="#">Symptom Sleuth</a></li>
                   <li><a href="#">Shopping List</a></li>
                   <li><a href="#">Cocktails Quiz</a></li>
-                  <li><a href="#">Lab3D</a></li>          
+                  <li><a href="#">Lab<sub>3</sub>D</a></li>          
                 </ul>
               </li>
-    					<li><a href="#">Design &amp; Visual Communication</a></li>
+    					<li class="nav_sub"><a href="#">Design &amp; Visual Communication</a></li>
+              <li>
+                <ul>
+                  <li><a href="#">Aplia redesign</a></li>
+                  <li><a href="#">Lysozyme interactive</a></li> 
+                  <li><a href="#">Nature Chemistry cover</a></li>
+                  <li><a href="#">Visual field</a></li>
+                  <li><a href="#">Cerebral blood regulation</a></li>  
+                </ul>
+              </li>              
     					<li><a href="#">Writing &amp; Speaking</a></li>
     					<li><a href="#">Experiments</a></li>
     					<li><a href="#">Reading Notes</a></li>
@@ -54,6 +64,14 @@
             <li><a href="#">behance</a></li>
           </ul>
       </footer> 
-
+      <script>
+        $(document).ready(function() {
+          $('.nav_sub').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).next().toggleClass('open');
+          });
+        });
+      </script>
     </body>
 </html>

@@ -507,9 +507,9 @@ body {
   width: 65px;
   -webkit-filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
   filter: drop-shadow(0 9px 15px rgba(246, 97, 103, 0.7));
-  transition: -webkit-filter 200ms ease-in-out;
-  transition: filter 200ms ease-in-out;
-  transition: filter 200ms ease-in-out, -webkit-filter 200ms ease-in-out; }
+  transition: -webkit-filter 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: filter 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: filter 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-filter 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .logo svg:hover {
     cursor: pointer;
     -webkit-filter: drop-shadow(0 9px 15px #f66167);
@@ -527,20 +527,41 @@ body {
   .nav li {
     list-style: none; }
   .nav a {
+    background-color: #f1f2f3;
     color: #36393c;
     display: block;
-    padding: 15px 30px 15px 0;
+    padding: 15px 40px 15px 0;
+    position: relative;
     text-decoration: none;
-    transition: all 200ms ease-in-out; }
-    .nav a:hover, .nav a:focus {
-      color: #f66167; }
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .nav a:hover {
+      background-color: #dee1e4; }
 
-.nav_sub {
-  display: none; }
-  .nav_sub li {
-    border-top: 1px solid #dee1e4; }
-  .nav_sub.open {
-    display: block; }
+.nav_sub a:after {
+  content: "";
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  position: absolute;
+  right: 12px;
+  top: 42%;
+  background: url("../img/triangle-icon.svg") no-repeat; }
+  .nav_sub a:after:hover {
+    transform: translate; }
+
+.nav_sub.active a {
+  background-color: #dee1e4;
+  color: #000; }
+
+.nav_sub + li {
+  max-height: 0;
+  opacity: 0;
+  transition: all 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .nav_sub + li li {
+    border-bottom: 1px solid #dee1e4; }
+  .nav_sub + li.open {
+    max-height: 500px;
+    opacity: 1; }
 
 @media screen and (max-width: 700px) {
   .nav {

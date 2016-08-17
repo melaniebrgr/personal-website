@@ -9,30 +9,54 @@ $padding-li: 15px;
 		list-style: none;
 	}
 	a {
-		// background-color: $light-1;
+		background-color: $light-1;
 		color: $dark-1;
 		display: block;
-		padding: $padding-li 30px $padding-li 0;
+		padding: $padding-li 40px $padding-li 0;
+		position: relative;
 		text-decoration: none;
 		transition: all $short-trns $easing;
-		&:hover,
-		&:focus {
-			// background-color: $mid-2;
-			// color: $black;
-			color: $accent-1;
+		&:hover {
+			background-color: $mid-2;
 		}
 	}
 }
 
 .nav_sub {
-	display: none;
-	li {
-		border-top: 1px solid $mid-2;
+	a:after {    
+    content: "";
+    display: inline-block;
+    // transform-origin: top;
+    // transform: rotateZ(180deg);
+    width: 0.9rem;
+    height: 0.9rem;
+    position: absolute;
+    right: 12px;
+    top: 42%;
+    background: url("../img/triangle-icon.svg") no-repeat;
+    &:hover {
+    	transform: translate
+    }
 	}
-	&.open {
-		display: block;
+	&.active a {
+		background-color: $mid-2;
+		color: $black;
+	}
+	& + li {
+		max-height: 0;
+		opacity: 0;
+		transition: all $long-trns $easing;
+		li {
+			border-bottom: 1px solid $mid-2;
+		}
+		&.open {
+			max-height: 500px;
+			opacity: 1;
+		}
 	}
 }
+
+
 
 @media screen and (max-width: $md-ish) {
 	.nav {

@@ -4,7 +4,7 @@
     width: 65px;
     filter: drop-shadow(0 9px 15px rgba($accent-1, 0.7));
     // Consider implementing feGaussianBlur SVG filter instead
-    transition: filter $short-trns $easing;
+    transition: filter $long-trns $easing;
     &:hover {
     	cursor: pointer;
     	filter: drop-shadow(0 9px 15px rgba($accent-1, 1));
