@@ -6,7 +6,6 @@ $nav-border: 1px solid $mid-2;
 .nav {
 	font-size: 1.3rem;
 	font-weight: 100;
-	padding: 38px 0;
 	text-align: right;
 	li {
 		list-style: none;
@@ -36,18 +35,18 @@ $nav-border: 1px solid $mid-2;
 	a:after {
 		// triangle icon   
     content: "";
+    background: url("../img/triangle-icon.svg") no-repeat;
     display: inline-block;
-    width: 0.9rem;
+    filter: drop-shadow(0 3px 4px rgba($dark-1, 0));
     height: 0.9rem;
     position: absolute;
     right: $icon-dist;
     top: 42%;
-    background: url("../img/triangle-icon.svg") no-repeat;
-    filter: drop-shadow(0 3px 4px rgba($dark-1, 0));
     transition: filter $short-trns $easing;
+    width: 0.9rem;
 	}
 	a:hover:after {
-		filter: drop-shadow(0 3px 4px rgba($dark-1, 0.7));
+		filter: drop-shadow(0 3px 4px rgba($dark-1, 0.6));
 	}
 	& + li {
 		// drop down menu
@@ -56,7 +55,6 @@ $nav-border: 1px solid $mid-2;
 		transition: all $long-trns $easing;
 		li {
 			border-bottom: $nav-border;
-			border-right: $nav-border;
 			border-left: $nav-border;
 		}
 		&.open {

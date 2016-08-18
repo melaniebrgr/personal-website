@@ -502,6 +502,9 @@ body {
   .feature {
     display: none; } }
 
+header {
+  border-right: 1px solid #dee1e4; }
+
 .logo svg {
   margin-top: 30px;
   width: 65px;
@@ -522,7 +525,6 @@ body {
 .nav {
   font-size: 1.3rem;
   font-weight: 100;
-  padding: 38px 0;
   text-align: right; }
   .nav li {
     list-style: none; }
@@ -543,22 +545,22 @@ body {
 
 .nav_sub a:after {
   content: "";
+  background: url("../img/triangle-icon.svg") no-repeat;
   display: inline-block;
-  width: 0.9rem;
+  -webkit-filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0));
+  filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0));
   height: 0.9rem;
   position: absolute;
   right: 12px;
   top: 42%;
-  background: url("../img/triangle-icon.svg") no-repeat;
-  -webkit-filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0));
-  filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0));
   transition: -webkit-filter 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: filter 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: filter 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-filter 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  transition: filter 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-filter 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 0.9rem; }
 
 .nav_sub a:hover:after {
-  -webkit-filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0.7));
-  filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0.7)); }
+  -webkit-filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0.6));
+  filter: drop-shadow(0 3px 4px rgba(54, 57, 60, 0.6)); }
 
 .nav_sub + li {
   max-height: 0;
@@ -566,7 +568,6 @@ body {
   transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .nav_sub + li li {
     border-bottom: 1px solid #dee1e4;
-    border-right: 1px solid #dee1e4;
     border-left: 1px solid #dee1e4; }
   .nav_sub + li.open {
     max-height: 500px;
