@@ -1,4 +1,7 @@
-$padding-li: 15px;
+$li-padding-vert: 15px;
+$li-padding-horz: 36px;
+$icon-dist: 12px;
+$nav-border: 1px solid $mid-2;
 
 .nav {
 	font-size: 1.3rem;
@@ -12,7 +15,7 @@ $padding-li: 15px;
 		background-color: $light-1;
 		color: $dark-1;
 		display: block;
-		padding: $padding-li 40px $padding-li 0;
+		padding: $li-padding-vert $li-padding-horz $li-padding-vert 0;
 		position: relative;
 		text-decoration: none;
 		transition: all $short-trns $easing;
@@ -23,46 +26,58 @@ $padding-li: 15px;
 }
 
 .nav_sub {
-	a:after {    
+	// styling for menu items containing dropdown menus
+	// might need to us JS for animations instead of CSS due to wierd behaviour
+	&.active a {
+		// active state style
+		background-color: $mid-2;
+		color: $black;
+	}	
+	a:after {
+		// triangle icon   
     content: "";
     display: inline-block;
-    // transform-origin: top;
-    // transform: rotateZ(180deg);
     width: 0.9rem;
     height: 0.9rem;
     position: absolute;
-    right: 12px;
+    right: $icon-dist;
     top: 42%;
     background: url("../img/triangle-icon.svg") no-repeat;
-    &:hover {
-    	transform: translate
-    }
+    filter: drop-shadow(0 3px 4px rgba($dark-1, 0));
+    transition: filter $short-trns $easing;
 	}
-	&.active a {
-		background-color: $mid-2;
-		color: $black;
+	a:hover:after {
+		filter: drop-shadow(0 3px 4px rgba($dark-1, 0.7));
 	}
 	& + li {
+		// drop down menu
 		max-height: 0;
 		opacity: 0;
 		transition: all $long-trns $easing;
 		li {
-			border-bottom: 1px solid $mid-2;
+			border-bottom: $nav-border;
+			border-right: $nav-border;
+			border-left: $nav-border;
 		}
 		&.open {
 			max-height: 500px;
 			opacity: 1;
 		}
+		a {
+			background-color: lighten($light-1, 2%);			
+		}
 	}
 }
 
 
-
 @media screen and (max-width: $md-ish) {
 	.nav {
-		text-align: center;
-		li {
-			padding: $padding-li 30px $padding-li 30px;
+		text-align: left;
+		a {
+			padding-left: $li-padding-horz;
 		}
+	}
+	.nav_sub a:after {
+		left: $icon-dist;
 	}
 }
