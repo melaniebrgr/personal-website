@@ -7,4 +7,4 @@ My portfolio website is *under construction*, and will contain sections:
 - Experiments
 - Reading Notes
 
-Check back on August 20, 2016.
+Check back on August 24, 2016.
