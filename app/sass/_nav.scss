@@ -1,5 +1,5 @@
-$li-padding-vert: 15px;
-$li-padding-horz: 36px;
+$a-padding-vert: 15px;
+$a-padding-horz: 36px;
 $icon-dist: 12px;
 $nav-border: 1px solid $mid-2;
 
@@ -14,7 +14,7 @@ $nav-border: 1px solid $mid-2;
 		background-color: $light-1;
 		color: $dark-1;
 		display: block;
-		padding: $li-padding-vert $li-padding-horz $li-padding-vert 0;
+		padding: $a-padding-vert $a-padding-horz $a-padding-vert 0;
 		position: relative;
 		text-decoration: none;
 		transition: all $short-trns $easing;
@@ -62,7 +62,7 @@ $nav-border: 1px solid $mid-2;
 			opacity: 1;
 		}
 		a {
-			background-color: lighten($light-1, 2%);			
+			background-color: $light-2;			
 		}
 	}
 }
@@ -72,7 +72,7 @@ $nav-border: 1px solid $mid-2;
 	.nav {
 		text-align: left;
 		a {
-			padding-left: $li-padding-horz;
+			padding-left: $a-padding-horz;
 		}
 	}
 	.nav_sub a:after {

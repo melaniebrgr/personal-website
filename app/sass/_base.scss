@@ -8,6 +8,7 @@ $white: #fff;
 $black: #000;
 
 $light-1: #f1f2f3; //warm off-white (background)
+$light-2: lighten($light-1, 2%);
 // $mid-1: #eae6e7; //warm taupe (feature bkgd)
 $mid-1: #e9e7e8;
 $mid-2: #dee1e4; //cool gray (feature bkgd)

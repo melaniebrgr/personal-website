@@ -60,8 +60,7 @@ body {
 	.headshot,
 	.social-media,
 	.social-media li {
-		display: inline-block;
-		vertical-align: middle;
+		float: left;
 	}
 }
 
