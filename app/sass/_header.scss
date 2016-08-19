@@ -1,3 +1,9 @@
 header {
 	border-right: 1px solid $mid-2;
 }
+
+@media screen and (max-width: $md-ish) { 
+	header {
+		border-right: none;
+	}
+}
