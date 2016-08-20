@@ -481,7 +481,8 @@ body {
   padding: 0 2rem; }
   .footer .headshot,
   .footer .social-media,
-  .footer .social-media li {
+  .footer .copyright,
+  .footer li {
     float: left; }
 
 @media screen and (max-width: 700px) {
@@ -623,6 +624,20 @@ header {
     .social-media a:hover {
       background-color: #f6f7f8; }
 
+.copyright {
+  color: #36393c;
+  padding: 15px 0;
+  margin-top: 4.1rem;
+  margin-left: -20px; }
+
+@media screen and (max-width: 1090px) {
+  .copyright {
+    margin-top: -49px;
+    margin-left: 0; } }
+
 @media screen and (max-width: 872px) {
   .headshot {
-    display: none; } }
+    display: none; }
+  .copyright {
+    margin-top: 0;
+    margin-left: 0; } }

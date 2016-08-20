@@ -22,9 +22,25 @@
 		}
 	}
 }
+.copyright {
+	color: $dark-1;
+	padding: $a-padding-vert 0;
+	margin-top: 4.1rem;
+	margin-left: -20px;
+}
 
+@media screen and (max-width: 1090px) {
+	.copyright {
+		margin-top: -49px;
+		margin-left: 0;
+	}
+}
 @media screen and (max-width: 872px) {
 	.headshot {
 		display: none;
+	}	
+	.copyright {
+		margin-top: 0;
+		margin-left: 0;
 	}
 }

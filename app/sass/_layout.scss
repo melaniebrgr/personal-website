@@ -59,7 +59,8 @@ body {
 	@include block-sizing;
 	.headshot,
 	.social-media,
-	.social-media li {
+	.copyright,
+	li {
 		float: left;
 	}
 }
