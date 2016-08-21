@@ -467,7 +467,7 @@ body {
   .feature canvas {
     height: 19em;
     width: 100%; }
-  .feature .quote {
+  .feature .headline {
     display: inline-block;
     left: 50%;
     min-width: 80%;
@@ -591,16 +591,16 @@ header {
   background-color: #dee1e4;
   background: linear-gradient(to bottom, #e9e7e8 0%, #dee1e4 100%); }
 
-.feature .quote h2 {
+.feature .headline h2 {
   color: #36393c;
   font-size: 2rem; }
 
-.feature .quote footer {
+.feature .headline footer {
   font-size: 1rem;
   text-align: right; }
 
 @media screen and (max-width: 700px) {
-  .feature .quote h2 {
+  .feature .headline h2 {
     font-size: 1.6rem; } }
 
 .headshot {
@@ -627,15 +627,9 @@ header {
 .copyright {
   color: #36393c;
   padding: 15px 0;
-  margin-top: 4.1rem;
-  margin-left: -20px; }
+  margin-top: -49px; }
 
-@media screen and (max-width: 1090px) {
-  .copyright {
-    margin-top: -49px;
-    margin-left: 0; } }
-
-@media screen and (max-width: 872px) {
+@media screen and (max-width: 1100px) {
   .headshot {
     display: none; }
   .copyright {

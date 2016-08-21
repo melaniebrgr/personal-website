@@ -3,7 +3,7 @@
 		background-color: $mid-2;
 		background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
 	}
-	.quote {
+	.headline {
 		h2 {
 			color: $dark-1;
 			font-size: 2rem;
@@ -17,7 +17,7 @@
 
 @media screen and (max-width: $md-ish) { 
 	.feature {
-		.quote h2 {
+		.headline h2 {
 			font-size: 1.6rem;
 		}		
 	}
