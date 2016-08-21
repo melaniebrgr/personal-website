@@ -45,12 +45,99 @@
     		<section>
     			<div class="feature">
     				<canvas></canvas>
-    				<blockquote class="headline">
+<!--     				<blockquote class="headline">
               <h2>{{Quote: Fabulas nominavi usu ei. Quo novum error mandamus eu, novum aliquid argumentum est eu. Vix quando epicuri complectitur cu.}}</h2>
               <footer>{{Citation}}</footer>
+            </blockquote> -->
+            <blockquote class="headline">
+              <h2>GCTAvatar</h2>
+              <footer>Create an artistic visualization based on your own or anonymous genetic data from the 23andme API that can be used as a unique avatar image.</footer>
+              <button>Visit site</button>
             </blockquote>
+            <!-- <h2 class="headline">GCTAvatar</h2> -->
     			</div>
-    			<article>{{Article}}</article>
+    			<article>
+            <h3>Introduction</h3> 
+            <p>The gaming experience is becoming even more immersive with virtual reality. You’ll feel like you’re actually in the game, but what if the game could uniquely react to you? What if your real-life personal traits could affect how powerful a spell you cast, how effective potions are, how good your night-vision is, or how much you could carry before being encumbered? (Looking at you, Skyrim.) What if we could use genetic data from the 23andMe API to set up the base stats of a virtual avatar? Then, what if we could synchronize these stats with biometric data from the <a href="https://dev.fitbit.com/ca" target="_blank">fitbit API</a> so that you could level-up irl, alongside your avatar? (I, for one, would be much more motivated to hit the gym.) Add this to a 3D scan of your body, and you have a virtual doppelgänger. Someone will eventually build this. This project was a proof-of-concept that asked the question: can I generate a custom avatar image based on genetic data from the 23andMe API?</p>
+            <h3>Challenges</h3>
+            <p>There were a number of challenges along the way:</p>
+            <p><span class="challenge-number">1</span>23andMe uses OAuth 2.0 to authenticate and give clients access to their genetic data through a third-party (GCTAvatar). Requests to the 23andMe authentication and resource servers are done through the backend. To develop locally I needed to set up a PHP backend server (MAMP) and get help from a backend developer to write the cURL requests to handle authorization code and token exchange. To obtain an authorization code, the client is sent to 23andMe’s authorization site with each genetic datum requested (the scope) included as query parameters. Once the client gives explicit permission, they are redirected to GCTAvatar with an authorization code which was set as a browser cookie with the <a href="https://github.com/js-cookie/js-cookie" target="_blank">js-cookie library</a>. The code is then exchanged for an access token which is used to call the 23andMe API endpoints indicated in the scope. If the user is not genotyped then a demo user endpoint is used. Client-side, these steps are hidden behind a loading animation and once the 23andMe user data is obtained a callback function displays the avatar visualization.</p>
+            <p><span class="challenge-number">2</span>The values of the SNPs (single nucleotide polymorphisms) requested in the scope needed to be transformed into values used to generate an image. While single G, C, T, or A base pair mutations predispose certain phenotypic results (blue, green or brown eyes, for example), they do not guarantee them. A lot depends on pure chance and a person’s ancestry, the latter of which was not something I could account for in the limited project timeline (Table #). I avoided predicting skin colour altogether. I opted for a naive interpretation: given a certain mutation, what was the percent likelihood of a particular phenotype? Then I generated a random number and saw if it fell within that percent likelihood and set the predicted result to a user model object (Snippet 1).</p>
+            <pre>
+              <h4>Snippet 1</h4>
+              <code>
+                usermodel = {
+                  sex: "female",
+                  fullname: "Lilly Mendel",
+                  eyecolor: "blue",
+                  freckles: "few",
+                  eyesight: "wears glasses",
+                  haircolor: "brown",
+                  neanderthalness: "normal"
+                };             
+              </code>
+            </pre>
+            <p>The user model object was then used an input value to a subsequent animation model function which return another object with values used to set up the animation (Snippet 2). The animation model function used hash maps to match user model value inputs to animation value outputs.</p>
+            <pre>
+              <h4>Snippet 2</h4>
+              <code>
+                animationmodel = {
+                  sex: "female",
+                  eyecolor: {hue: "#916b66", spin: -172},
+                  eyedialatormuscle: "#D6B08C",
+                  freckles: 0,
+                  glasses: false,
+                  haircolor: "#916b66",
+                  neanderthal: {scale: 1, stroke: 7}
+                };               
+              </code>
+            </pre>
+            <p><span class="challenge-number">3</span>How to turn genetic data into a visualization? I could have pre-rendered all possible visual outcomes to a sprite sheets and set up logic to composite an image from the different sprites (face shape, eyes, glasses and so on). Another, more flexible option was to use a SVG image as a base and use javascript to set the SVG attributes. To support this option, there were several excellent examples of how fill and stroke properties can be controlled and animated with libraries like GSAP, which would allow for a more interesting visualization. I first created base female and male SVG images in Illustrator (Figure #), being careful to avoid effects such as drop shadows that cannot yet be exported as a SVG filter effects. I then followed the general pattern for SVG animation using GSAP from <a href="https://ihatetomatoes.net/" target="_blank">Petr Tichy’s courses</a> and the <a href="http://greensock.com/" target="_blank">Greensock website</a>.</p>
+            <ol>
+              <li>Breakdown a complex animation into individual child timelines.</li>
+              <li>Create a parent timeline and add child timelines to it by returning them from functions.</li>
+              <li>To create a child timeline, with the function scope first save references to each SVG element to be animated. Second, create a timeline instance and add tweens (animation steps) to it. Finally, return the timeline</li>
+            </ol>
+            <p>Modularizing the animation mades it easier to edit and organize child timelines later</p>
+            <pre>
+              <h4>Snippet 3</h4>
+              <code>
+                // Child timeline
+                function animNeanderthal(animodel) {
+                  var eyebrows = $('#eyebrow path, #eyebrow-2 path'),
+                      nose = $('#nose path’);
+
+                  var neanderTl = new TimelineMax();
+                  neanderTl
+                    .to(eyebrows, 0.8, {attr: {'stroke-width': animodel.neanderthal.stroke}})
+                    .to(nose, 0.8, {transformOrigin:'right top', scale: animodel.neanderthal.scale});
+                  return neanderTl;
+                }              
+              </code>
+            </pre>
+            <pre>
+              <h4>Snippet 4</h4>
+              <code>
+                // Parent timeline
+                function setMainTl(animodel) {
+                  mainTl = new TimelineMax();
+                  mainTl
+                    .add(animSex(animodel))
+                    .add(animEyes(animodel))
+                    .add(animGlasses(animodel))
+                    .add(animHaircolor(animodel))
+                    .add(animFreckles(animodel))
+                    .add(animNeanderthal(animodel));
+                }           
+              </code>
+            </pre> 
+            <h3>Colophon</h3>
+            <p>Colour theme taken from <a href="http://madebyfieldwork.com/" target="_blank">madebyfieldwork</a>. Layout wireframe made in Sketch (Figure 1). “Cabin" and "Cabin Sketch" fonts from Google.</p>       
+            <figure>
+              <img src="#" alt="" />
+              <figcaption>GCTAvatar wireframes</figcaption>
+            </figure>          
+          </article>
     		</section>
     	</div>
 
@@ -62,6 +149,7 @@
             <li><a href="http://codepen.io/melaniebrgr/" target="_blank">codepen</a></li>
             <li><a href="https://www.behance.net/melanieburger" target="_blank">behance</a></li>
             <li><a href="https://www.pinterest.com/melaniebrgr/" target="_blank">pinterest</a></li>
+            <li><a href="img/CV.pdf" download>CV</a></li>
           </ul>
           <div class="headshot"><img src="img/headshot-1.png" alt="Illustration of me"></div>
           <ul class="copyright">
