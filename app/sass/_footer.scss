@@ -14,7 +14,7 @@
 		display: block;
 		font-size: 1.3rem;
 		background-color: $mid-2;
-		padding: $a-padding-vert $a-padding-horz;
+		padding: $a-padding-vert $a-padding-horz - 2px;
 		text-decoration: none;
 		transition: all $short-trns $easing;
 		&:hover {
