@@ -471,7 +471,6 @@ body {
     display: inline-block;
     left: 50%;
     min-width: 80%;
-    overflow: auto;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) translateX(-50%); }
