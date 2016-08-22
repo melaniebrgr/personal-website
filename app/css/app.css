@@ -460,17 +460,18 @@ body {
     flex-basis: 65%; }
 
 .logo {
-  height: 19em; }
+  height: 19rem; }
 
 .feature {
   position: relative; }
   .feature canvas {
-    height: 19em;
+    height: 19rem;
     width: 100%; }
   .feature .headline {
     display: inline-block;
     left: 50%;
     min-width: 80%;
+    overflow: auto;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) translateX(-50%); }
@@ -478,7 +479,8 @@ body {
 .footer {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  overflow: auto; }
   .footer .headshot,
   .footer .social-media,
   .footer .copyright,
@@ -495,12 +497,15 @@ body {
     height: initial; }
   .feature,
   .feature canvas {
-    height: 12em;
-    overflow: auto; } }
+    height: 17rem; } }
 
 @media screen and (max-width: 350px) {
   .feature {
-    display: none; } }
+    height: 10rem; }
+    .feature canvas {
+      height: 9rem; }
+    .feature footer {
+      display: none; } }
 
 header {
   border-right: 1px solid #dee1e4; }
@@ -536,7 +541,7 @@ header {
     background-color: #f1f2f3;
     color: #36393c;
     display: block;
-    padding: 15px 42px 15px 0;
+    padding: 15px 42px;
     position: relative;
     text-decoration: none;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
@@ -589,19 +594,37 @@ header {
 
 .feature canvas {
   background-color: #dee1e4;
-  background: linear-gradient(to bottom, #e9e7e8 0%, #dee1e4 100%); }
+  background: linear-gradient(to bottom, #e9e7e8 0%, #dee1e4 100%);
+  padding: 15px 42px; }
 
 .feature .headline h2 {
   color: #36393c;
-  font-size: 2rem; }
+  font-size: 2.8rem;
+  margin-bottom: 0.45rem; }
 
 .feature .headline footer {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.45rem;
   text-align: right; }
+
+.feature .cta {
+  background-color: #f66167;
+  background: linear-gradient(to bottom, #f66167 0%, #f24665 100%);
+  box-shadow: 0 8px 27px rgba(246, 97, 103, 0.6);
+  color: #f1f2f3;
+  display: inline-block;
+  float: right;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  padding: 15px 42px;
+  text-decoration: none;
+  transition: box-shadow 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .feature .cta:hover {
+    box-shadow: 0 7px 25px #f66167; }
 
 @media screen and (max-width: 700px) {
   .feature .headline h2 {
-    font-size: 1.6rem; } }
+    font-size: 2rem; } }
 
 .headshot {
   width: 10rem;

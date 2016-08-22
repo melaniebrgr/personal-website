@@ -1,5 +1,5 @@
 // Layout module variables
-$feature-height: 19em;
+$feature-height: 19rem;
 @mixin block-sizing {
 	margin: 0 auto;
 	max-width: 1200px;
@@ -47,16 +47,18 @@ body {
 	}
 	.headline {
 		display: inline-block;
-	    left: 50%;
-	    min-width: 80%;
-	    position: absolute;
-	    top: 50%;
-	    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    min-width: 80%;
+		overflow: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
 	}
 }
 
 .footer {
 	@include block-sizing;
+	overflow: auto;
 	.headshot,
 	.social-media,
 	.copyright,
@@ -79,13 +81,18 @@ body {
 	}
 	.feature,
 	.feature canvas {
-		height: 12em;
-		overflow: auto;
+		height: 17rem;
 	}
 }
 
 @media screen and (max-width: $sm-ish) { 
 	.feature {
-		display: none;
+		height: 10rem;
+		canvas {
+			height: 9rem;
+		}
+		footer {
+			display: none;
+		}
 	}
 }

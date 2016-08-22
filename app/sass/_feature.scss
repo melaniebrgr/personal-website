@@ -2,15 +2,34 @@
 	canvas {
 		background-color: $mid-2;
 		background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
+		padding: $a-padding-vert $a-padding-horz;
 	}
 	.headline {
 		h2 {
 			color: $dark-1;
-			font-size: 2rem;
+			font-size: 2.8rem;
+	    margin-bottom: 0.45rem;
 		}
 		footer {
-			font-size: 1rem;
+			font-size: 1.1rem;
+	    line-height: 1.45rem;
 			text-align: right;
+		}
+	}
+	.cta {
+		background-color: $accent-1;
+		background: linear-gradient(to bottom, $accent-1 0%,$accent-2 100%);
+		box-shadow: 0 8px 27px rgba($accent-1, 0.6);
+		color: $light-1;
+		display: inline-block;
+		float: right;
+		font-size: 1.1rem;
+	  margin-top: 0.75rem;
+		padding: $a-padding-vert $a-padding-horz;
+		text-decoration: none;
+		transition: box-shadow $long-trns $easing;
+		&:hover {
+			box-shadow: 0 7px 25px rgba($accent-1, 1);
 		}
 	}
 }
@@ -18,7 +37,7 @@
 @media screen and (max-width: $md-ish) { 
 	.feature {
 		.headline h2 {
-			font-size: 1.6rem;
+			font-size: 2rem;
 		}		
 	}
 }

@@ -26,10 +26,22 @@ $short-trns: 200ms;
 $long-trns: 500ms;
 $easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 
+// Padding
+$a-padding-vert: 15px;
+$a-padding-horz: 42px;
+
 // General mixins
 @mixin show {
 	border: 1px solid blue;
 	background-color: rgba(0,0,0,0.25);
+}
+
+@mixin clearfix {
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
 }
 
 // Project-wide base styles
