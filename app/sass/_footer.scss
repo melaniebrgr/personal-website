@@ -12,9 +12,9 @@
 		border: $nav-border;
 		color: $dark-1;
 		display: block;
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		background-color: $mid-2;
-		padding: $a-padding-vert $a-padding-horz - 2px;
+		padding: $a-padding-vert $a-padding-horz;
 		text-decoration: none;
 		transition: all $short-trns $easing;
 		&:hover {
@@ -30,13 +30,7 @@
 	margin-top: -49px;
 }
 
-// @media screen and (max-width: 1090px) {
-// 	.copyright {
-// 		margin-top: -49px;
-// 		margin-left: 0;
-// 	}
-// }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1145px) {
 	.headshot {
 		display: none;
 	}	
