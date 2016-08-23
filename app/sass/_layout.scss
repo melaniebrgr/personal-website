@@ -45,7 +45,8 @@ body {
 		height: $feature-height;
 		width: 100%;
 	}
-	.headline {
+	.headline,
+	.quote {
 		display: inline-block;
     left: 50%;
     min-width: 80%;

@@ -9,7 +9,6 @@ $black: #000;
 
 $light-1: #f1f2f3; //warm off-white (background)
 $light-2: lighten($light-1, 2%);
-// $mid-1: #eae6e7; //warm taupe (feature bkgd)
 $mid-1: #e9e7e8;
 $mid-2: #dee1e4; //cool gray (feature bkgd)
 $dark-1: #36393c; //dark cool grey (text)
@@ -21,7 +20,14 @@ $accent-2: #f24665; //red (logo)
 $serif-1: Georgia, "Times New Roman", serif;
 $sans-serif-1: Avenir, Helvetica, Arial, sans-serif;
 
-// transitions
+// Font sizes
+$sans-sm: 1.1rem;
+$sans-md: 1.3rem;
+$serif-sm: 1.3rem;
+$serif-md: 2rem;
+$serif-lg: 2.8rem;
+
+// Transitions
 $short-trns: 200ms;
 $long-trns: 500ms;
 $easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
@@ -30,7 +36,7 @@ $easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 $a-padding-vert: 15px;
 $a-padding-horz: 42px;
 
-// General mixins
+// Mixins
 @mixin show {
 	border: 1px solid blue;
 	background-color: rgba(0,0,0,0.25);

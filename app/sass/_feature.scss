@@ -1,3 +1,14 @@
+@mixin feature-lg-txt {
+	color: $dark-1;
+  margin-bottom: 0.45rem;
+}
+
+@mixin feature-sm-txt {
+	font-size: $sans-sm;
+  line-height: 1.45rem;
+	text-align: right;
+}
+
 .feature {
 	canvas {
 		background-color: $mid-2;
@@ -6,14 +17,20 @@
 	}
 	.headline {
 		h2 {
-			color: $dark-1;
-			font-size: 2.8rem;
-	    margin-bottom: 0.45rem;
+			@include feature-lg-txt;
+			font-size: $serif-lg;
+		}
+		p {
+			@include feature-sm-txt;
+		}
+	}
+	.quote {
+		h2 {
+			@include feature-lg-txt;
+			font-size: $serif-md;
 		}
 		footer {
-			font-size: 1.1rem;
-	    line-height: 1.45rem;
-			text-align: right;
+			@include feature-sm-txt;
 		}
 	}
 	.cta {
@@ -23,7 +40,7 @@
 		color: $light-1;
 		display: inline-block;
 		float: right;
-		font-size: 1.1rem;
+		font-size: $sans-sm;
 	  margin-top: 0.75rem;
 		padding: $a-padding-vert $a-padding-horz;
 		text-decoration: none;
@@ -37,7 +54,7 @@
 @media screen and (max-width: $md-ish) { 
 	.feature {
 		.headline h2 {
-			font-size: 2rem;
+			font-size: $serif-md;
 		}		
 	}
 }
