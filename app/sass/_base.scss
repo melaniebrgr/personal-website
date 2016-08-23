@@ -7,9 +7,10 @@ $lg-ish: 1400px;
 $white: #fff;
 $black: #000;
 
-$light-1: #f1f2f3; //warm off-white (background)
+// $light-1: #f1f2f3; //warm off-white (background)
+$light-1: #f7f7f8;
 $light-2: lighten($light-1, 2%);
-$mid-1: #e9e7e8;
+$mid-1: #e9e7e8; //warm taupe (feature bkgd)
 $mid-2: #dee1e4; //cool gray (feature bkgd)
 $dark-1: #36393c; //dark cool grey (text)
 
@@ -19,13 +20,16 @@ $accent-2: #f24665; //red (logo)
 // Font stack variables
 $serif-1: Georgia, "Times New Roman", serif;
 $sans-serif-1: Avenir, Helvetica, Arial, sans-serif;
+$mono-1: "Courier New", Courier, monospace, monospace;
 
 // Font sizes
 $sans-sm: 1.1rem;
 $sans-md: 1.3rem;
+$serif-xsm: 1rem;
 $serif-sm: 1.3rem;
-$serif-md: 2rem;
+$serif-md: 1.8rem;
 $serif-lg: 2.8rem;
+$serif-xlg: 4.2rem;
 
 // Transitions
 $short-trns: 200ms;
@@ -42,6 +46,15 @@ $a-padding-horz: 42px;
 	background-color: rgba(0,0,0,0.25);
 }
 
+@mixin transition($rule: all, $length: $short-trns) {
+	transition: $rule $length $easing;
+}
+
+@mixin subtle-bevel-border($color: $mid-2) {
+  border-top: 1px solid lighten($color, 2%);
+  border-bottom: 1px solid darken($color, 2%);
+}
+
 @mixin clearfix {
 	&:after {
 	  content: "";
@@ -53,6 +66,7 @@ $a-padding-horz: 42px;
 // Project-wide base styles
 html {
 	font-family: $sans-serif-1;
+	color: $dark-1;
 }
 
 h1, h2, h3, h4, h5, h6 {

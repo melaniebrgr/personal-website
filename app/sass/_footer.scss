@@ -9,7 +9,7 @@
 	list-style: none;
 	margin-top: 3.9rem;
 	a {
-		border: $nav-border;
+		@include subtle-bevel-border;
 		color: $dark-1;
 		display: block;
 		font-size: $sans-sm;

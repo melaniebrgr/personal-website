@@ -5,12 +5,13 @@
 
 @mixin feature-sm-txt {
 	font-size: $sans-sm;
-  line-height: 1.45rem;
+  line-height: 1.58rem;
 	text-align: right;
 }
 
 .feature {
 	canvas {
+		@include subtle-bevel-border;
 		background-color: $mid-2;
 		background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
 		padding: $a-padding-vert $a-padding-horz;
@@ -34,9 +35,10 @@
 		}
 	}
 	.cta {
-		background-color: $accent-1;
-		background: linear-gradient(to bottom, $accent-1 0%,$accent-2 100%);
-		box-shadow: 0 8px 27px rgba($accent-1, 0.6);
+		@include subtle-bevel-border($accent-1);
+		background-color: $accent-1;	
+		// background: linear-gradient(to bottom, $accent-1 0%,$accent-2 100%);
+		// box-shadow: 0 8px 27px rgba($accent-1, 0.6);
 		color: $light-1;
 		display: inline-block;
 		float: right;
@@ -44,9 +46,10 @@
 	  margin-top: 0.75rem;
 		padding: $a-padding-vert $a-padding-horz;
 		text-decoration: none;
-		transition: box-shadow $long-trns $easing;
+		transition: all $long-trns $easing;
 		&:hover {
-			box-shadow: 0 7px 25px rgba($accent-1, 1);
+			// box-shadow: 0 7px 25px rgba($accent-1, 1);
+			background-color: $accent-2;
 		}
 	}
 }
