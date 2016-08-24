@@ -18,6 +18,19 @@ article {
   img {
     width: 100%;
   }
+  ul {
+    @include clearfix;
+    margin: $a-padding-vert $a-padding-horz;
+    li {
+      background-color: $light-2;
+      border: $nav-border;
+      border-radius: 20px;
+      color: $dark-1;
+      display: inline-block;
+      // float: left;
+      padding: $a-padding-vert/2 $a-padding-horz/2;
+    }
+  }
 	ol {
 		counter-reset: list;
 		margin: $a-padding-vert 63px;
@@ -71,23 +84,22 @@ article {
   	background-color: $mid-2;
   	color: $dark-1;
   	font-family: $serif-1;
-    margin-top: -3px;
+    margin-top: -4px;
     padding: $a-padding-vert $a-padding-horz;
   }	
 	.challenge-number {
     background-color: $mid-2;
-		color: $light-2;
+		color: $dark-1;
     display: inline-block;
 		float: left;
     font-family: $serif-1;
     font-size: $serif-xlg;
     height: 41px; //Magic number
-    line-height: 46px;
+    line-height: 50px;
     margin-right: 16px;
     margin-top: 3px;
     overflow: hidden;
     text-align: center;
-    vertical-align: middle;
     width: 65px; 
 	}
 }

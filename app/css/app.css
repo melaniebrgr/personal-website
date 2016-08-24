@@ -651,6 +651,20 @@ article a {
 article img {
   width: 100%; }
 
+article ul {
+  margin: 15px 42px; }
+  article ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+  article ul li {
+    background-color: #fcfcfd;
+    border: 1px solid #dee1e4;
+    border-radius: 20px;
+    color: #36393c;
+    display: inline-block;
+    padding: 7.5px 21px; }
+
 article ol {
   counter-reset: list;
   margin: 15px 63px; }
@@ -698,23 +712,22 @@ article figcaption {
   background-color: #dee1e4;
   color: #36393c;
   font-family: Georgia, "Times New Roman", serif;
-  margin-top: -3px;
+  margin-top: -4px;
   padding: 15px 42px; }
 
 article .challenge-number {
   background-color: #dee1e4;
-  color: #fcfcfd;
+  color: #36393c;
   display: inline-block;
   float: left;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 4.2rem;
   height: 41px;
-  line-height: 46px;
+  line-height: 50px;
   margin-right: 16px;
   margin-top: 3px;
   overflow: hidden;
   text-align: center;
-  vertical-align: middle;
   width: 65px; }
 
 .headshot {
