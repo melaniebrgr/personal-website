@@ -3,10 +3,20 @@
   <header class="headline">
     <h2>GCTAvatar</h2>
     <p>Create an artistic visualization based on your own or anonymous genetic data from the 23andme API that can be used as a unique avatar image.</p>
-    <a href="http://www.lab3d.io/GCTAvatar/" class="cta">Visit site</a>
+    <a href="http://www.lab3d.io/GCTAvatar/" target="_blank" class="cta">Visit site</a>
   </header>
 </div>
 <article>
+  <ul class="tech">
+    <li>HTML</li>
+    <li>Sass</li>
+    <li>JS</li>
+    <li>SVG</li>
+    <li>OAuth2</li>
+    <li>PHP</li>
+    <li>jQuery</li>
+    <li>GSAP</li>
+  </ul>
   <h3>Introduction</h3> 
   <p>The gaming experience is becoming even more immersive with virtual reality. You’ll feel like you’re actually in the game, but what if the game could uniquely react to you? What if your real-life personal traits could affect how powerful a spell you cast, how effective potions are, how good your night-vision is, or how much you could carry before being encumbered? (Looking at you, Skyrim.)</p>
   <p>What if we could use genetic data from the <a href="https://api.23andme.com/docs/" target="_blank">23andMe API</a> to set up the base stats of a virtual avatar? Then, what if we could synchronize these stats with biometric data from the <a href="https://dev.fitbit.com/ca" target="_blank">fitbit API</a> so that you could level-up irl, alongside your avatar? (I, for one, would be much more motivated to hit the gym.) Add this to a 3D scan of your body, and you have a virtual doppelgänger. Someone will eventually build this. This project was a proof-of-concept that asked the question: can I generate a custom avatar image based on genetic data from the 23andMe API?</p>
@@ -14,7 +24,7 @@
   <p>There were a number of challenges along the way:</p>
   <p><span class="challenge-number">1</span>23andMe uses OAuth 2.0 to allow clients to give authorization to their genetic data through a third-party (GCTAvatar). Accordingly, a supporting LAMP backend (Linux Apache MySQL PHP) was needed to perform REST API requests to 23andMe. To obtain an authorization code, a client is sent to 23andMe’s authorization site with each genetic datum requested included as query parameters (the scope).</p>
   <p>Once the client gives explicit permission, they are redirected to GCTAvatar with an authorization code which is set as a browser cookie with the <a href="https://github.com/js-cookie/js-cookie" target="_blank">js-cookie library</a>. The code is then exchanged for an access token which is used to call the 23andMe API endpoints indicated in the scope. If the user is not genotyped then a demo user endpoint is used. Client-side, these steps are hidden behind a loading animation. Once the 23andMe user data is obtained, a callback function displays the avatar visualization.</p>
-  <p><span class="challenge-number">2</span>The values of the SNPs (single nucleotide polymorphisms) requested in the scope needed to be transformed into values used to generate an image. While single G, C, T, or A base pair mutations predispose certain phenotypic results (blue, green or brown eyes, for example), they do not guarantee them (Table 1). A lot depends on pure chance and a person’s ancestry, the latter of which was not something I could account for in the limited project timeline. I avoided predicting skin colour altogether. I opted for a naive interpretation: given a certain mutation, what was the percent likelihood of a particular phenotype? Then I generated a random number and saw if it fell within that range and set the predicted result to a user model object (Snippet 1).</p>
+  <p><span class="challenge-number">2</span>The values of the SNPs (single nucleotide polymorphisms) requested in the scope needed to be transformed into values used to generate an image. While single G, C, T, or A base pair mutations predispose certain phenotypic results (blue, green or brown eyes, for example), they do not guarantee them. A lot depends on pure chance and a person’s ancestry, the latter of which was not something I could account for in the limited project timeline. I avoided predicting skin colour altogether. I opted for a naive interpretation: given a certain mutation, what was the percent likelihood of a particular phenotype? Then I generated a random number and saw if it fell within that range and set the predicted result to a user model object (Snippet 1).</p>
   <pre>
     <code>
 usermodel = {
@@ -46,7 +56,7 @@ animationmodel = {
   </pre>
   <p><span class="challenge-number">3</span>How to turn genetic data into a visualization? I could have pre-rendered all possible visual outcomes to sprite sheets and written logic to composite an image from the different sprites (face shape, eyes, glasses and so on). However, another, more flexible solution was to use a SVG image as a base and set the SVG attributes with javascript. To support this option, there were several excellent examples of how fill and stroke properties can be controlled and animated with libraries like GSAP, which would allow for a more interesting visualization.</p>
   <figure>
-    <img src="#" alt="" />
+    <img src="views/gctavatar/fig1.png" alt="" />
     <figcaption>Figure 1. Base female and male heads created and exported from Illustrator.</figcaption>
   </figure>  
   <p>I first created base female and male SVG images in Illustrator (Figure 1), being careful to avoid effects such as drop shadows that cannot yet be exported as a SVG filter effects. I then followed the general pattern for SVG animation using GSAP from <a href="https://ihatetomatoes.net/" target="_blank">Petr Tichy’s courses</a> and the <a href="http://greensock.com/" target="_blank">Greensock website</a> (modularizing the animation mades it easier to edit and organize child timelines later):</p>
@@ -87,7 +97,7 @@ function setMainTl(animodel) {
   </pre> 
   <h3>Colophon</h3>
   <figure>
-    <img src="#" alt="" />
+    <img src="views/gctavatar/fig2.png" alt="" />
     <figcaption>Figure 2. GCTAvatar wireframes</figcaption>
   </figure>    
   <p>Colour theme taken from <a href="http://madebyfieldwork.com/" target="_blank">madebyfieldwork</a>. Layout wireframe made in Sketch (Figure 2). "<a href="https://fonts.google.com/specimen/Cabin" target="_blank">Cabin</a>" and "<a href="https://fonts.google.com/specimen/Cabin+Sketch" target="_blank">Cabin Sketch</a>" fonts from Google Fonts.</p>               
