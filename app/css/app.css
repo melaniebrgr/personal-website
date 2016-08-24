@@ -648,6 +648,9 @@ article a {
   article a:hover {
     color: #f66167; }
 
+article img {
+  width: 100%; }
+
 article ol {
   counter-reset: list;
   margin: 15px 63px; }
@@ -666,6 +669,12 @@ article ol {
     left: -1.3rem;
     position: absolute;
     top: -1px; }
+  article ol li.q::before {
+    content: 'Q';
+    top: 0px; }
+  article ol li.a::before {
+    content: 'A';
+    top: 0px; }
 
 article pre {
   background-color: #36393c;
@@ -689,6 +698,7 @@ article figcaption {
   background-color: #dee1e4;
   color: #36393c;
   font-family: Georgia, "Times New Roman", serif;
+  margin-top: -3px;
   padding: 15px 42px; }
 
 article .challenge-number {

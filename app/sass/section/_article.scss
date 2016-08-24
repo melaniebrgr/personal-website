@@ -15,6 +15,9 @@ article {
 			color: $accent-1;
 		}
 	}
+  img {
+    width: 100%;
+  }
 	ol {
 		counter-reset: list;
 		margin: $a-padding-vert 63px;
@@ -34,7 +37,15 @@ article {
       left: -1.3rem;
       position: absolute;
       top: -1px;
-    }		
+    }
+    li.q::before {
+      content: 'Q';
+      top: 0px;
+    }
+    li.a::before {
+      content: 'A';
+      top: 0px;
+    }    
 	}
 	pre {
 		background-color: $dark-1;
@@ -60,6 +71,7 @@ article {
   	background-color: $mid-2;
   	color: $dark-1;
   	font-family: $serif-1;
+    margin-top: -3px;
     padding: $a-padding-vert $a-padding-horz;
   }	
 	.challenge-number {
