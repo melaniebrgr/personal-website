@@ -13,7 +13,7 @@
 	canvas {
 		@include subtle-bevel-border;
 		background-color: $mid-2;
-		background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
+		// background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
 		padding: $a-padding-vert $a-padding-horz;
 	}
 	.headline {
@@ -38,7 +38,7 @@
 		@include subtle-bevel-border($accent-1);
 		background-color: $accent-1;	
 		// background: linear-gradient(to bottom, $accent-1 0%,$accent-2 100%);
-		// box-shadow: 0 8px 27px rgba($accent-1, 0.6);
+		box-shadow: 0 8px 27px rgba($accent-1, 0.6);
 		color: $light-1;
 		display: inline-block;
 		float: right;

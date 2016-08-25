@@ -1,9 +1,9 @@
-header {
+.header {
 	border-right: 1px solid $mid-2;
 }
 
 @media screen and (max-width: $md-ish) { 
-	header {
+	.header {
 		border-right: none;
 	}
 }

@@ -18,16 +18,14 @@ article {
   img {
     width: 100%;
   }
-  ul {
+  .tech {
     @include clearfix;
     margin: $a-padding-vert $a-padding-horz;
     li {
-      background-color: $light-2;
-      border: $nav-border;
+      background-color: $mid-2;
       border-radius: 20px;
       color: $dark-1;
       display: inline-block;
-      // float: left;
       padding: $a-padding-vert/2 $a-padding-horz/2;
     }
   }
@@ -68,7 +66,7 @@ article {
     	margin-top: $a-padding-vert;
     }
     code {
-    	color: $light-2;
+    	color: $mid-2;
 	    display: inline-block;
     	font-family: $mono-1;
     	line-height: 1.2rem;

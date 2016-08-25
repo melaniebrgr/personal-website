@@ -508,11 +508,11 @@ body {
     .feature footer {
       display: none; } }
 
-header {
+.header {
   border-right: 1px solid #dee1e4; }
 
 @media screen and (max-width: 700px) {
-  header {
+  .header {
     border-right: none; } }
 
 .logo svg {
@@ -591,7 +591,6 @@ header {
   border-top: 1px solid #e4e6e9;
   border-bottom: 1px solid #d8dcdf;
   background-color: #dee1e4;
-  background: linear-gradient(to bottom, #e9e7e8 0%, #dee1e4 100%);
   padding: 15px 42px; }
 
 .feature .headline h2 {
@@ -618,6 +617,7 @@ header {
   border-top: 1px solid #f76b70;
   border-bottom: 1px solid #f5575e;
   background-color: #f66167;
+  box-shadow: 0 8px 27px rgba(246, 97, 103, 0.6);
   color: #f7f7f8;
   display: inline-block;
   float: right;
@@ -651,15 +651,14 @@ article a {
 article img {
   width: 100%; }
 
-article ul {
+article .tech {
   margin: 15px 42px; }
-  article ul:after {
+  article .tech:after {
     content: "";
     display: table;
     clear: both; }
-  article ul li {
-    background-color: #fcfcfd;
-    border: 1px solid #dee1e4;
+  article .tech li {
+    background-color: #dee1e4;
     border-radius: 20px;
     color: #36393c;
     display: inline-block;
@@ -697,7 +696,7 @@ article pre {
   article pre + pre {
     margin-top: 15px; }
   article pre code {
-    color: #fcfcfd;
+    color: #dee1e4;
     display: inline-block;
     font-family: "Courier New", Courier, monospace, monospace;
     line-height: 1.2rem; }
