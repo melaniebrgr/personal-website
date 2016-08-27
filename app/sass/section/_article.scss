@@ -18,17 +18,6 @@ article {
   img {
     width: 100%;
   }
-  .tech {
-    @include clearfix;
-    margin: $a-padding-vert $a-padding-horz;
-    li {
-      background-color: $mid-2;
-      border-radius: 20px;
-      color: $dark-1;
-      display: inline-block;
-      padding: $a-padding-vert/2 $a-padding-horz/2;
-    }
-  }
 	ol {
 		counter-reset: list;
 		margin: $a-padding-vert 63px;
@@ -85,6 +74,18 @@ article {
     margin-top: -4px;
     padding: $a-padding-vert $a-padding-horz;
   }	
+  .tech {
+    @include clearfix;
+    margin: $a-padding-vert $a-padding-horz;
+    li {
+      background-color: $mid-2;
+      border-radius: 20px;
+      color: $dark-1;
+      display: inline-block;
+      margin-bottom: $a-padding-vert/2;
+      padding: $a-padding-vert/2 $a-padding-horz/2;
+    }
+  }
 	.challenge-number {
     background-color: $mid-2;
 		color: $dark-1;

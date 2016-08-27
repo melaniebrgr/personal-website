@@ -651,19 +651,6 @@ article a {
 article img {
   width: 100%; }
 
-article .tech {
-  margin: 15px 42px; }
-  article .tech:after {
-    content: "";
-    display: table;
-    clear: both; }
-  article .tech li {
-    background-color: #dee1e4;
-    border-radius: 20px;
-    color: #36393c;
-    display: inline-block;
-    padding: 7.5px 21px; }
-
 article ol {
   counter-reset: list;
   margin: 15px 63px; }
@@ -714,6 +701,20 @@ article figcaption {
   margin-top: -4px;
   padding: 15px 42px; }
 
+article .tech {
+  margin: 15px 42px; }
+  article .tech:after {
+    content: "";
+    display: table;
+    clear: both; }
+  article .tech li {
+    background-color: #dee1e4;
+    border-radius: 20px;
+    color: #36393c;
+    display: inline-block;
+    margin-bottom: 7.5px;
+    padding: 7.5px 21px; }
+
 article .challenge-number {
   background-color: #dee1e4;
   color: #36393c;
@@ -741,6 +742,7 @@ article .challenge-number {
   .social-media a {
     border-top: 1px solid #e4e6e9;
     border-bottom: 1px solid #d8dcdf;
+    border-left: 1px solid #dee1e4;
     color: #36393c;
     display: block;
     font-size: 1.1rem;

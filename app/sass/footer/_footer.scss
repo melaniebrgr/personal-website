@@ -10,6 +10,7 @@
 	margin-top: 3.9rem;
 	a {
 		@include subtle-bevel-border;
+		border-left: 1px solid $mid-2;
 		color: $dark-1;
 		display: block;
 		font-size: $sans-sm;
