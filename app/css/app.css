@@ -656,20 +656,6 @@ body {
     margin-top: -14px;
     width: 100%; }
 
-.fewd .tech {
-  margin: 15px 42px; }
-  .fewd .tech:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .fewd .tech li {
-    background-color: #dee1e4;
-    border-radius: 20px;
-    color: #36393c;
-    display: inline-block;
-    margin-bottom: 7.5px;
-    padding: 7.5px 21px; }
-
 .fewd .challenge-number {
   background-color: #dee1e4;
   color: #36393c;
@@ -760,6 +746,20 @@ article figcaption {
   font-family: Georgia, "Times New Roman", serif;
   margin-top: -4px;
   padding: 15px 42px; }
+
+article .tech {
+  margin: 15px 42px; }
+  article .tech:after {
+    content: "";
+    display: table;
+    clear: both; }
+  article .tech li {
+    background-color: #dee1e4;
+    border-radius: 20px;
+    color: #36393c;
+    display: inline-block;
+    margin-bottom: 7.5px;
+    padding: 7.5px 21px; }
 
 .headshot {
   width: 10rem;

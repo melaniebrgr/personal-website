@@ -61,5 +61,17 @@ article {
     font-family: $serif-1;
     margin-top: -4px;
     padding: $a-padding-vert $a-padding-horz;
-  }   
+  }
+  .tech {
+    @include clearfix;
+    margin: $a-padding-vert $a-padding-horz;
+    li {
+      background-color: $mid-2;
+      border-radius: 20px;
+      color: $dark-1;
+      display: inline-block;
+      margin-bottom: $a-padding-vert/2;
+      padding: $a-padding-vert/2 $a-padding-horz/2;
+    }
+  }     
 }
