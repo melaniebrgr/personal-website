@@ -27,11 +27,8 @@ body {
 	display: flex;
 	justify-content: center;
 	min-height: 100%;
-	header {
-		flex-basis: 35%;
-	}
 	section {
-		flex-basis: 65%;
+		width: 66%;
 	}
 }
 
@@ -75,6 +72,9 @@ body {
 		justify-content: flex-start;
 		header {
 			text-align: left;
+		}
+		section {
+			width: 100%;
 		}
 	}	
 	.logo {

@@ -15,7 +15,7 @@
     <li>RegExp</li>
   </ul>
 	<h3>Challenges</h3>
-	<p><span class="challenge-number">1</span>Some grocery items are priced by weight, not by quantity and I wanted to allow for this. I saved my grocery lists for the month and created a JSON file that listed each item along with a price-per-unit and price-per-kilo where applicable. I used regular expressions to extract numbers from the input quantity and look for “kg”, which if present, would then use the price-per-kilo multiplier for the item (Snippet 1). A few problems with this is that the quantity input is too permissive: if the user enters “12.3kj” the form won’t complain but simply use 12.3 as price multiplier – form validation needs to be added.</p>
+	<p><span class="challenge-number">1</span>Some grocery items are priced by weight, not by quantity and I wanted to allow for this. I created a JSON file that listed grocery items along with a price-per-unit and price-per-kilo where applicable. I used regular expressions to extract numbers from the input quantity and look for “kg”, which if present, would then use the price-per-kilo multiplier for the item (Snippet 1). A few problems with this is that the quantity input is too permissive: if the user enters “12.3kj” the form won’t complain but simply use 12.3 as price multiplier – form validation needs to be added.</p>
   <pre>
     <code>
 function getPrice( item, quantity ) {
@@ -45,7 +45,7 @@ function getPrice( item, quantity ) {
 	<h3>Colophon</h3>
 	<p>Colour theme ideas taken from <a href="http://css-weekly.com/issue-227/" target="_blank">CSS Weekly newsletter</a>. Wireframes for smallish and bigish screens made in Sketch (Figure 1). "<a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Open Sans</a>" font from Google Fonts.</p>
 	 <figure>
-    <img src="views/shoppinglist/fig1.png" alt="" />
+    <img src="views/frontendwebdevelopment/shoppinglist/fig1.png" alt="" />
     <figcaption>Figure 2. Shopping list wireframes</figcaption>
   </figure>  
 </article>

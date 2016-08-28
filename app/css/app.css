@@ -455,10 +455,8 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100%; }
-  .content header {
-    flex-basis: 35%; }
   .content section {
-    flex-basis: 65%; }
+    width: 66%; }
 
 .logo {
   height: 19rem; }
@@ -494,6 +492,8 @@ body {
     justify-content: flex-start; }
     .content header {
       text-align: left; }
+    .content section {
+      width: 100%; }
   .logo {
     height: initial; }
   .feature,
