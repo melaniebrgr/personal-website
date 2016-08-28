@@ -1,23 +1,30 @@
+@import 'frontendwebdevelopment';
+@import 'writingandspeaking';
+
 article {
-	h3 {
+	a {
+    @include transition(color);
+    color: $dark-1;
+    &:hover {
+      color: $accent-1;
+    }
+  }
+  h3 {
 		font-size: $serif-md;
-		margin: ($a-padding-vert*2) $a-padding-horz $a-padding-vert $a-padding-horz;
+		margin: $a-padding-vert*2 $a-padding-horz $a-padding-vert $a-padding-horz;
 	}
+  h4 {
+    font-size: $serif-sm;
+    margin-bottom: $a-padding-vert/2;
+  }
+  img {
+    width: 100%;
+  }  
 	p {
 		font-size: $sans-sm;
 		margin: $a-padding-vert $a-padding-horz;
 		line-height: 1.58rem;
 	}
-	a {
-		@include transition(color);
-		color: $dark-1;
-		&:hover {
-			color: $accent-1;
-		}
-	}
-  img {
-    width: 100%;
-  }
 	ol {
 		counter-reset: list;
 		margin: $a-padding-vert 63px;
@@ -47,58 +54,12 @@ article {
       top: 0px;
     }    
 	}
-	pre {
-		background-color: $dark-1;
-    overflow-x: scroll;
-    overflow-y: auto;
-    & + pre {
-    	margin-top: $a-padding-vert;
-    }
-    code {
-    	color: $mid-2;
-	    display: inline-block;
-    	font-family: $mono-1;
-    	line-height: 1.2rem;
-    }
-    figcaption {
-	    float: left;
-	    margin-top: -14px;
-	    width: 100%;
-    }
-	}
   figcaption {
-  	@include subtle-bevel-border;
-  	background-color: $mid-2;
-  	color: $dark-1;
-  	font-family: $serif-1;
+    @include subtle-bevel-border;
+    background-color: $mid-2;
+    color: $dark-1;
+    font-family: $serif-1;
     margin-top: -4px;
     padding: $a-padding-vert $a-padding-horz;
-  }	
-  .tech {
-    @include clearfix;
-    margin: $a-padding-vert $a-padding-horz;
-    li {
-      background-color: $mid-2;
-      border-radius: 20px;
-      color: $dark-1;
-      display: inline-block;
-      margin-bottom: $a-padding-vert/2;
-      padding: $a-padding-vert/2 $a-padding-horz/2;
-    }
-  }
-	.challenge-number {
-    background-color: $mid-2;
-		color: $dark-1;
-    display: inline-block;
-		float: left;
-    font-family: $serif-1;
-    font-size: $serif-xlg;
-    height: 41px; //Magic number
-    line-height: 50px;
-    margin-right: 16px;
-    margin-top: 3px;
-    overflow: hidden;
-    text-align: center;
-    width: 65px; 
-	}
+  }   
 }

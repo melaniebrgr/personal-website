@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -448,24 +449,23 @@ html,
 body {
   height: 100%; }
 
-.content {
+.container {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 2rem;
   display: flex;
   justify-content: center;
   min-height: 100%; }
-  .content section {
+  .container .content {
     width: 66%; }
 
 .logo {
   height: 19rem; }
 
 .feature {
-  position: relative; }
-  .feature canvas {
-    height: 19rem;
-    width: 100%; }
+  position: relative;
+  height: 19rem;
+  width: 100%; }
   .feature .headline,
   .feature .quote {
     display: inline-block;
@@ -487,12 +487,14 @@ body {
     float: left; }
 
 @media screen and (max-width: 700px) {
-  .content {
+  .container {
     flex-direction: column;
     justify-content: flex-start; }
-    .content header {
+    .container header {
       text-align: left; }
-    .content section {
+      .container header .nav {
+        margin-top: 32px; }
+    .container .content {
       width: 100%; }
   .logo {
     height: initial; }
@@ -502,11 +504,21 @@ body {
 
 @media screen and (max-width: 350px) {
   .feature {
-    height: 10rem; }
+    height: 16rem; }
     .feature canvas {
-      height: 9rem; }
+      height: 16rem; }
     .feature footer {
       display: none; } }
+
+@media screen and (max-width: 320px) {
+  .feature,
+  .feature canvas {
+    height: 18rem; } }
+
+@media screen and (max-width: 296px) {
+  .feature,
+  .feature canvas {
+    height: 22rem; } }
 
 .header {
   border-right: 1px solid #dee1e4; }
@@ -587,60 +599,111 @@ body {
   .nav_sub a:after {
     left: 14px; } }
 
-.feature canvas {
+.feature {
   border-top: 1px solid #e4e6e9;
   border-bottom: 1px solid #d8dcdf;
   background-color: #dee1e4;
   padding: 15px 42px; }
-
-.feature .headline h2 {
-  color: #36393c;
-  margin-bottom: 0.45rem;
-  font-size: 2.8rem; }
-
-.feature .headline p {
-  font-size: 1.1rem;
-  line-height: 1.58rem;
-  text-align: right; }
-
-.feature .quote h2 {
-  color: #36393c;
-  margin-bottom: 0.45rem;
-  font-size: 1.8rem; }
-
-.feature .quote footer {
-  font-size: 1.1rem;
-  line-height: 1.58rem;
-  text-align: right; }
-
-.feature .cta {
-  border-top: 1px solid #f76b70;
-  border-bottom: 1px solid #f5575e;
-  background-color: #f66167;
-  box-shadow: 0 8px 27px rgba(246, 97, 103, 0.6);
-  color: #f7f7f8;
-  display: inline-block;
-  float: right;
-  font-size: 1.1rem;
-  margin-top: 0.75rem;
-  padding: 15px 42px;
-  text-decoration: none;
-  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  .feature .cta:hover {
-    background-color: #f24665; }
+  .feature .headline h2 {
+    color: #36393c;
+    margin-bottom: 0.45rem;
+    font-size: 2.8rem; }
+  .feature .headline p {
+    font-size: 1.1rem;
+    line-height: 1.58rem;
+    text-align: right; }
+  .feature .quote h2 {
+    color: #36393c;
+    margin-bottom: 0.45rem;
+    font-size: 1.8rem; }
+  .feature .quote footer {
+    font-size: 1.1rem;
+    line-height: 1.58rem;
+    text-align: right; }
+  .feature .cta {
+    border-top: 1px solid #f76b70;
+    border-bottom: 1px solid #f5575e;
+    background-color: #f66167;
+    box-shadow: 0 8px 27px rgba(246, 97, 103, 0.6);
+    color: #f7f7f8;
+    display: inline-block;
+    float: right;
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+    padding: 15px 42px;
+    text-decoration: none;
+    transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .feature .cta:hover {
+      background-color: #f24665; }
 
 @media screen and (max-width: 700px) {
   .feature .headline h2 {
     font-size: 1.8rem; } }
 
-article h3 {
-  font-size: 1.8rem;
-  margin: 30px 42px 15px 42px; }
+.fewd pre {
+  background-color: #36393c;
+  overflow-x: scroll;
+  overflow-y: auto; }
+  .fewd pre + pre {
+    margin-top: 15px; }
+  .fewd pre code {
+    color: #dee1e4;
+    display: inline-block;
+    font-family: "Courier New", Courier, monospace, monospace;
+    line-height: 1.2rem; }
+  .fewd pre figcaption {
+    float: left;
+    margin-top: -14px;
+    width: 100%; }
 
-article p {
-  font-size: 1.1rem;
-  margin: 15px 42px;
-  line-height: 1.58rem; }
+.fewd .tech {
+  margin: 15px 42px; }
+  .fewd .tech:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .fewd .tech li {
+    background-color: #dee1e4;
+    border-radius: 20px;
+    color: #36393c;
+    display: inline-block;
+    margin-bottom: 7.5px;
+    padding: 7.5px 21px; }
+
+.fewd .challenge-number {
+  background-color: #dee1e4;
+  color: #36393c;
+  display: inline-block;
+  float: left;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.2rem;
+  height: 65px;
+  line-height: 50px;
+  margin-right: 16px;
+  margin-top: 3px;
+  overflow: hidden;
+  text-align: center;
+  width: 65px; }
+
+.writingandspeaking .section {
+  transition: background-color 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+  padding: 30px 42px;
+  text-decoration: none; }
+  .writingandspeaking .section h4 span {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    color: #f66167;
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+  .writingandspeaking .section span:first-of-type:before {
+    content: '';
+    padding-right: 0; }
+  .writingandspeaking .section span:before {
+    content: '·';
+    padding-right: 4px; }
+  .writingandspeaking .section:hover {
+    background-color: #dee1e4;
+    color: #36393c; }
 
 article a {
   transition: color 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -648,8 +711,21 @@ article a {
   article a:hover {
     color: #f66167; }
 
+article h3 {
+  font-size: 1.8rem;
+  margin: 30px 42px 15px 42px; }
+
+article h4 {
+  font-size: 1.3rem;
+  margin-bottom: 7.5px; }
+
 article img {
   width: 100%; }
+
+article p {
+  font-size: 1.1rem;
+  margin: 15px 42px;
+  line-height: 1.58rem; }
 
 article ol {
   counter-reset: list;
@@ -676,22 +752,6 @@ article ol {
     content: 'A';
     top: 0px; }
 
-article pre {
-  background-color: #36393c;
-  overflow-x: scroll;
-  overflow-y: auto; }
-  article pre + pre {
-    margin-top: 15px; }
-  article pre code {
-    color: #dee1e4;
-    display: inline-block;
-    font-family: "Courier New", Courier, monospace, monospace;
-    line-height: 1.2rem; }
-  article pre figcaption {
-    float: left;
-    margin-top: -14px;
-    width: 100%; }
-
 article figcaption {
   border-top: 1px solid #e4e6e9;
   border-bottom: 1px solid #d8dcdf;
@@ -700,35 +760,6 @@ article figcaption {
   font-family: Georgia, "Times New Roman", serif;
   margin-top: -4px;
   padding: 15px 42px; }
-
-article .tech {
-  margin: 15px 42px; }
-  article .tech:after {
-    content: "";
-    display: table;
-    clear: both; }
-  article .tech li {
-    background-color: #dee1e4;
-    border-radius: 20px;
-    color: #36393c;
-    display: inline-block;
-    margin-bottom: 7.5px;
-    padding: 7.5px 21px; }
-
-article .challenge-number {
-  background-color: #dee1e4;
-  color: #36393c;
-  display: inline-block;
-  float: left;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 4.2rem;
-  height: 41px;
-  line-height: 50px;
-  margin-right: 16px;
-  margin-top: 3px;
-  overflow: hidden;
-  text-align: center;
-  width: 65px; }
 
 .headshot {
   width: 10rem;

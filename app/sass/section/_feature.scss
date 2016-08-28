@@ -10,12 +10,10 @@
 }
 
 .feature {
-	canvas {
-		@include subtle-bevel-border;
-		background-color: $mid-2;
-		// background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
-		padding: $a-padding-vert $a-padding-horz;
-	}
+	@include subtle-bevel-border;
+	background-color: $mid-2;
+	// background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
+	padding: $a-padding-vert $a-padding-horz;
 	.headline {
 		h2 {
 			@include feature-lg-txt;
