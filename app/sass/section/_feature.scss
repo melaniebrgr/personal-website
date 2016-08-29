@@ -24,6 +24,9 @@
 		}
 	}
 	.quote {
+		h1 {
+			font-size: $serif-xlg;
+		}
 		h2 {
 			@include feature-lg-txt;
 			font-size: $serif-md;

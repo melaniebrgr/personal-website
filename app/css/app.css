@@ -469,11 +469,10 @@ body {
   .feature .headline,
   .feature .quote {
     display: inline-block;
-    left: 50%;
     min-width: 80%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) translateX(-50%); }
+    transform: translateY(-50%); }
 
 .footer {
   margin: 0 auto;
@@ -612,6 +611,8 @@ body {
     font-size: 1.1rem;
     line-height: 1.58rem;
     text-align: right; }
+  .feature .quote h1 {
+    font-size: 4.2rem; }
   .feature .quote h2 {
     color: #36393c;
     margin-bottom: 0.45rem;
