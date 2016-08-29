@@ -468,9 +468,7 @@ body {
   width: 100%; }
   .feature .headline,
   .feature .quote {
-    display: inline-block;
-    min-width: 80%;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%); }
 
@@ -601,16 +599,17 @@ body {
 .feature {
   border-top: 1px solid #e4e6e9;
   border-bottom: 1px solid #d8dcdf;
-  background-color: #dee1e4;
-  padding: 15px 42px; }
-  .feature .headline h2 {
-    color: #36393c;
-    margin-bottom: 0.45rem;
-    font-size: 2.8rem; }
-  .feature .headline p {
-    font-size: 1.1rem;
-    line-height: 1.58rem;
-    text-align: right; }
+  background-color: #dee1e4; }
+  .feature .headline {
+    overflow: auto;
+    padding: 30px 42px; }
+    .feature .headline h2 {
+      color: #36393c;
+      margin-bottom: 0.45rem;
+      font-size: 2.8rem; }
+    .feature .headline p {
+      font-size: 1.1rem;
+      line-height: 1.58rem; }
   .feature .quote h1 {
     font-size: 4.2rem; }
   .feature .quote h2 {
@@ -619,8 +618,7 @@ body {
     font-size: 1.8rem; }
   .feature .quote footer {
     font-size: 1.1rem;
-    line-height: 1.58rem;
-    text-align: right; }
+    line-height: 1.58rem; }
   .feature .cta {
     border-top: 1px solid #f76b70;
     border-bottom: 1px solid #f5575e;

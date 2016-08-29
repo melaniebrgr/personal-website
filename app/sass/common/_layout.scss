@@ -42,10 +42,10 @@ body {
 	width: 100%;
 	.headline,
 	.quote {
-		display: inline-block;
+		// display: inline-block;
     // left: 50%;
-    min-width: 80%;
-    position: absolute;
+    // width: 100%;
+    position: relative;
     top: 50%;
     // transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%);
