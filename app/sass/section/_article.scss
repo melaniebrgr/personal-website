@@ -9,6 +9,12 @@ article {
       color: $accent-1;
     }
   }
+  em {
+    font-family: $sans-serif-1;
+    color: $accent-1;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }  
   h3 {
 		font-size: $serif-md;
 		margin: $a-padding-vert*2 $a-padding-horz $a-padding-vert $a-padding-horz;

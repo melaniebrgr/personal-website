@@ -544,6 +544,7 @@ body {
 .nav {
   font-size: 1.3rem;
   font-weight: 100;
+  line-height: 1.5rem;
   text-align: right; }
   .nav li {
     list-style: none; }
@@ -603,6 +604,8 @@ body {
   .feature .headline {
     overflow: auto;
     padding: 30px 42px; }
+    .feature .headline h1 {
+      font-size: 4.2rem; }
     .feature .headline h2 {
       color: #36393c;
       margin-bottom: 0.45rem;
@@ -610,8 +613,6 @@ body {
     .feature .headline p {
       font-size: 1.1rem;
       line-height: 1.58rem; }
-  .feature .quote h1 {
-    font-size: 4.2rem; }
   .feature .quote h2 {
     color: #36393c;
     margin-bottom: 0.45rem;
@@ -675,11 +676,6 @@ body {
   display: block;
   padding: 30px 42px;
   text-decoration: none; }
-  .writingandspeaking .section h4 span {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    color: #f66167;
-    font-size: 0.8rem;
-    text-transform: uppercase; }
   .writingandspeaking .section span:first-of-type:before {
     content: '';
     padding-right: 0; }
@@ -695,6 +691,12 @@ article a {
   color: #36393c; }
   article a:hover {
     color: #f66167; }
+
+article em {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #f66167;
+  font-size: 0.8rem;
+  text-transform: uppercase; }
 
 article h3 {
   font-size: 1.8rem;

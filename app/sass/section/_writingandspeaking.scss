@@ -4,14 +4,6 @@
 		display: block;
 		padding: $a-padding-vert*2 $a-padding-horz;
 		text-decoration: none;
-		h4 {
-			span {
-				font-family: $sans-serif-1;
-  			color: $accent-1;
-			  font-size: 0.8rem;
-				text-transform: uppercase;
-			}
-		}
 		span {
 			&:first-of-type:before {
 				content: '';

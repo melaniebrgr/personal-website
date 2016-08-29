@@ -16,7 +16,10 @@
 	// background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
 	.headline {
 		overflow: auto;
-		padding: $a-padding-vert*2 $a-padding-horz;
+		padding: $a-padding-vert*2 $a-padding-horz;		
+		h1 {
+			font-size: $serif-xlg;
+		}
 		h2 {
 			@include feature-lg-txt;
 			font-size: $serif-lg;
@@ -26,9 +29,6 @@
 		}
 	}
 	.quote {
-		h1 {
-			font-size: $serif-xlg;
-		}
 		h2 {
 			@include feature-lg-txt;
 			font-size: $serif-md;
