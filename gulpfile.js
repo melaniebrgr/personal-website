@@ -10,54 +10,45 @@ var gulp = require('gulp'),
 	ngannotate = require('gulp-ng-annotate'),
   gulpSequence = require('gulp-sequence'); 
 
-var path = {
-	root: './',
-	build: './build/**/*',
-	index: './app/index.html',
-	scss: './app/sass/**/*.scss', 
-	css: './app/css/',
-	copySass: [
-		'./app/bower_components/normalize-scss/sass/**/*.scss',
-    './app/bower_components/meyer-reset/stylesheets/_meyer-reset.scss'
-	]
-};
-
 gulp.task('server', function() {
   connect.server({
-    root: path.root,
+    root: './app',
     livereload: true
   });
 });
 
-gulp.task('clean', function () {
-	return gulp.src(path.build, {read: false})
+gulp.task('clean', function () { // OK
+	return gulp.src('./build/**/*', {read: false})
 		.pipe(clean());
 });
 
+gulp.task('copySass', function() { // N/A
+  gulp.src([
+    './app/bower_components/normalize-scss/sass/**/*.scss',
+    './app/bower_components/meyer-reset/stylesheets/_meyer-reset.scss'
+  ])
+    .pipe( gulp.dest('./app/sass/reset'));
+});
+
 gulp.task('sass', function () {
-  return gulp.src(path.scss)
+  return gulp.src('./app/sass/**/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['> 20%'],
       cascade: false
     }))
-    .pipe(gulp.dest(path.css));
+    .pipe(gulp.dest('./app/css/'));
 });
 
 gulp.task('copy', function() {
-  gulp.src('./app/views/**/*.html')
+  gulp.src('./app/img/*')
+    .pipe( gulp.dest('./build/img/'));  
+  gulp.src('./app/views/**/*')
     .pipe( gulp.dest('./build/views/'));
-  // gulp.src( './app/scripts/**/*.json')
-  //   .pipe( gulp.dest('./build/scripts/'));  
-});
-
-gulp.task('copySass', function() {
-  gulp.src( path.copySass)
-    .pipe( gulp.dest('./app/sass/'));
 });
 
 gulp.task('usemin', function() {
-  return gulp.src(path.index)
+  return gulp.src('./app/index.html')
     .pipe(usemin({
       css: [ cssmin() ],
       html: [ htmlmin() ],
@@ -74,9 +65,9 @@ gulp.task('reload', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch( path.scss, ['sass'])
+  gulp.watch( './app/sass/**/*.scss', ['sass'])
   gulp.watch( './app/**/*', ['reload']);
 });
 
-gulp.task('default', gulpSequence( 'copySass', 'sass', 'server', 'reload', 'watch'));
-// gulp.tast('build', gulpSequence( 'clean', 'sass', 'copy', 'usemin'));
+gulp.task('default', gulpSequence( 'sass', 'server', 'reload', 'watch'));
+gulp.task('build', gulpSequence( 'clean', 'copy', 'sass', 'usemin'));

@@ -54,7 +54,6 @@ body {
 
 .footer {
 	@include block-sizing;
-	overflow: auto;
 	.headshot,
 	.social-media,
 	.copyright,
