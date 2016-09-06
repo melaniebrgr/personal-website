@@ -45,6 +45,7 @@
 		float: left;
 		font-size: $sans-sm;
 	  margin-top: 1.4rem;
+	  margin-right: 0.7rem;
 		padding: $a-padding-vert $a-padding-horz;
 		text-decoration: none;
 		transition: all $long-trns $easing;
@@ -53,17 +54,6 @@
 			box-shadow: 0 8px 37px rgba(darken($accent-1, 50%), 0.8);
 			background-color: $accent-2;
 		}
-	}
-	&:after {
-
-		content: "";
-		display: block;
-
-
-	width: 0;
-	height: 0;
-	border-top: 100px solid $dark-1;
-	border-right: 100px solid transparent;		
 	}
 }
 

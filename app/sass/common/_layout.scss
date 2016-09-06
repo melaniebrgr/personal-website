@@ -54,12 +54,7 @@ body {
 
 .footer {
 	@include block-sizing;
-	.headshot,
-	.social-media,
-	.copyright,
-	li {
-		float: left;
-	}
+	position: relative;
 }
 
 // Layout module responsize media queries

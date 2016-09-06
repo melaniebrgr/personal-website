@@ -1,23 +1,31 @@
 .headshot {
+	position: absolute;
+	top: -63px;
+	right: -77px;
 	width: 10rem;
-  margin-left: -54px;
 	img {
 		width: 100%;
 	}
 }
 .social-media {
+	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
 	margin-top: 3.9rem;
-	a {
+	li {
 		@include subtle-bevel-border;
 		border-left: 1px solid $mid-2;
-		color: $dark-1;
-		display: block;
-		font-size: $sans-sm;
 		background-color: $mid-2;
+		display: inline-flex;
+		flex-grow: 1;
+		justify-content: center;
 		padding: $a-padding-vert $a-padding-horz;
-		text-decoration: none;
 		transition: all $short-trns $easing;
+		a {
+			text-decoration: none;
+			font-size: $sans-sm;
+			color: $dark-1;
+		}
 		&:hover {
 			background-color: $light-2;
 		}
@@ -26,15 +34,22 @@
 .copyright {
 	color: $dark-1;
 	padding: $a-padding-vert 0;
-	margin-top: -49px;
 }
 
-@media screen and (max-width: 1145px) {
+@media screen and (max-width: 1032px) {
 	.headshot {
-		display: none;
-	}	
-	.copyright {
-		margin-top: 0;
-		margin-left: 0;
+    top: -36px;
+	}
+}
+
+@media screen and (max-width: 617px) {
+	.headshot {
+    top: -14px;
+	}
+}
+
+@media screen and (max-width: 462px) {
+	.headshot {
+    display: none;
 	}
 }
