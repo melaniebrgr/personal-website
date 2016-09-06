@@ -1,7 +1,7 @@
 .headshot {
 	position: absolute;
 	top: -63px;
-	right: -77px;
+	right: 0;
 	width: 10rem;
 	img {
 		width: 100%;
@@ -12,6 +12,7 @@
 	flex-wrap: wrap;
 	list-style: none;
 	margin-top: 3.9rem;
+	width: 93.3%;
 	li {
 		@include subtle-bevel-border;
 		border-left: 1px solid $mid-2;
@@ -36,13 +37,16 @@
 	padding: $a-padding-vert 0;
 }
 
-@media screen and (max-width: 1032px) {
+@media screen and (max-width: 1101px) {
 	.headshot {
     top: -36px;
 	}
 }
 
 @media screen and (max-width: $md-ish) {
+	.social-media {
+		width: 100%;
+	}
 	.headshot {
     display: none;
 	}

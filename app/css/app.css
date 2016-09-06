@@ -770,7 +770,7 @@ article .tech {
 .headshot {
   position: absolute;
   top: -63px;
-  right: -77px;
+  right: 0;
   width: 10rem; }
   .headshot img {
     width: 100%; }
@@ -779,7 +779,8 @@ article .tech {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-top: 3.9rem; }
+  margin-top: 3.9rem;
+  width: 93.3%; }
   .social-media li {
     border-top: 1px solid #eceeef;
     border-bottom: 1px solid #d0d4d9;
@@ -801,10 +802,12 @@ article .tech {
   color: #36393c;
   padding: 15px 0; }
 
-@media screen and (max-width: 1032px) {
+@media screen and (max-width: 1101px) {
   .headshot {
     top: -36px; } }
 
 @media screen and (max-width: 700px) {
+  .social-media {
+    width: 100%; }
   .headshot {
     display: none; } }
