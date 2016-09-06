@@ -1,18 +1,17 @@
 @mixin feature-lg-txt {
-	color: $dark-1;
-  margin-bottom: 0.45rem;
+	color: $light-1;
+	font-size: $serif-lg;
 }
 
 @mixin feature-sm-txt {
+	color: $mid-2;
 	font-size: $sans-sm;
   line-height: 1.58rem;
-	// text-align: right;
 }
 
 .feature {
-	@include subtle-bevel-border;
-
-	background-color: $mid-2;
+	@include subtle-bevel-border($dark-1);
+	background-color: $dark-1;
 	// background: linear-gradient(to bottom, $mid-1 0%,$mid-2 100%);
 	.headline {
 		overflow: auto;
@@ -22,7 +21,6 @@
 		}
 		h2 {
 			@include feature-lg-txt;
-			font-size: $serif-lg;
 		}
 		p {
 			@include feature-sm-txt;
@@ -40,20 +38,32 @@
 	.cta {
 		@include subtle-bevel-border($accent-1);
 		background-color: $accent-1;	
-		// background: linear-gradient(to bottom, $accent-1 0%,$accent-2 100%);
-		box-shadow: 0 8px 27px rgba($accent-1, 0.6);
+		background: linear-gradient(to bottom, $accent-1 0%,lighten($accent-2, 2%) 100%);
+		box-shadow: 0 4px 25px rgba(darken($accent-1, 50%), 0.4);
 		color: $light-1;
 		display: inline-block;
-		float: right;
+		float: left;
 		font-size: $sans-sm;
-	  margin-top: 0.75rem;
+	  margin-top: 1.4rem;
 		padding: $a-padding-vert $a-padding-horz;
 		text-decoration: none;
 		transition: all $long-trns $easing;
+
 		&:hover {
-			// box-shadow: 0 7px 25px rgba($accent-1, 1);
+			box-shadow: 0 8px 37px rgba(darken($accent-1, 50%), 0.8);
 			background-color: $accent-2;
 		}
+	}
+	&:after {
+
+		content: "";
+		display: block;
+
+
+	width: 0;
+	height: 0;
+	border-top: 100px solid $dark-1;
+	border-right: 100px solid transparent;		
 	}
 }
 

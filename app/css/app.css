@@ -597,43 +597,53 @@ body {
     left: 14px; } }
 
 .feature {
-  border-top: 1px solid #e4e6e9;
-  border-bottom: 1px solid #d8dcdf;
-  background-color: #dee1e4; }
+  border-top: 1px solid #424649;
+  border-bottom: 1px solid #2a2c2f;
+  background-color: #36393c; }
   .feature .headline {
     overflow: auto;
     padding: 30px 42px; }
     .feature .headline h1 {
       font-size: 4.2rem; }
     .feature .headline h2 {
-      color: #36393c;
-      margin-bottom: 0.45rem;
+      color: #f7f7f8;
       font-size: 2.8rem; }
     .feature .headline p {
+      color: #dee1e4;
       font-size: 1.1rem;
       line-height: 1.58rem; }
   .feature .quote h2 {
-    color: #36393c;
-    margin-bottom: 0.45rem;
+    color: #f7f7f8;
+    font-size: 2.8rem;
     font-size: 1.8rem; }
   .feature .quote footer {
+    color: #dee1e4;
     font-size: 1.1rem;
     line-height: 1.58rem; }
   .feature .cta {
-    border-top: 1px solid #f76b70;
-    border-bottom: 1px solid #f5575e;
+    border-top: 1px solid #f7797e;
+    border-bottom: 1px solid #f54950;
     background-color: #f66167;
-    box-shadow: 0 8px 27px rgba(246, 97, 103, 0.6);
+    background: linear-gradient(to bottom, #f66167 0%, #f3506d 100%);
+    box-shadow: 0 4px 25px rgba(83, 5, 8, 0.4);
     color: #f7f7f8;
     display: inline-block;
-    float: right;
+    float: left;
     font-size: 1.1rem;
-    margin-top: 0.75rem;
+    margin-top: 1.4rem;
     padding: 15px 42px;
     text-decoration: none;
     transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     .feature .cta:hover {
+      box-shadow: 0 8px 37px rgba(83, 5, 8, 0.8);
       background-color: #f24665; }
+  .feature:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 100px solid #36393c;
+    border-right: 100px solid transparent; }
 
 @media screen and (max-width: 700px) {
   .feature .headline h2 {
@@ -646,7 +656,7 @@ body {
   .fewd pre + pre {
     margin-top: 15px; }
   .fewd pre code {
-    color: #dee1e4;
+    color: #fff;
     display: inline-block;
     font-family: "Courier New", Courier, monospace, monospace;
     line-height: 1.2rem; }
@@ -656,8 +666,8 @@ body {
     width: 100%; }
 
 .fewd .challenge-number {
-  background-color: #dee1e4;
-  color: #36393c;
+  background-color: #f66167;
+  color: #f7f7f8;
   display: inline-block;
   float: left;
   font-family: Georgia, "Times New Roman", serif;
@@ -739,8 +749,8 @@ article ol {
     top: 0px; }
 
 article figcaption {
-  border-top: 1px solid #e4e6e9;
-  border-bottom: 1px solid #d8dcdf;
+  border-top: 1px solid #eceeef;
+  border-bottom: 1px solid #d0d4d9;
   background-color: #dee1e4;
   color: #36393c;
   font-family: Georgia, "Times New Roman", serif;
@@ -771,8 +781,8 @@ article .tech {
   list-style: none;
   margin-top: 3.9rem; }
   .social-media a {
-    border-top: 1px solid #e4e6e9;
-    border-bottom: 1px solid #d8dcdf;
+    border-top: 1px solid #eceeef;
+    border-bottom: 1px solid #d0d4d9;
     border-left: 1px solid #dee1e4;
     color: #36393c;
     display: block;

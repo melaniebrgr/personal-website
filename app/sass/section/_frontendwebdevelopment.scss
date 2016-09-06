@@ -7,7 +7,7 @@
     	margin-top: $a-padding-vert;
     }
     code {
-    	color: $mid-2;
+    	color: $white;
 	    display: inline-block;
     	font-family: $mono-1;
     	line-height: 1.2rem;
@@ -19,8 +19,8 @@
     }
 	}
 	.challenge-number {
-    background-color: $mid-2;
-		color: $dark-1;
+    background-color: $accent-1;
+		color: $light-1;
     display: inline-block;
 		float: left;
     font-family: $serif-1;

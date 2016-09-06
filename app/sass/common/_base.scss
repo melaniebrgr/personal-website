@@ -16,6 +16,7 @@ $dark-1: #36393c; //dark cool grey (text)
 
 $accent-1: #f66167; //coral (logo)
 $accent-2: #f24665; //red (logo)
+$accent-3: #4a93e5; //blue
 
 // Font stack variables
 $serif-1: Georgia, "Times New Roman", serif;
@@ -51,8 +52,8 @@ $a-padding-horz: 42px;
 }
 
 @mixin subtle-bevel-border($color: $mid-2) {
-  border-top: 1px solid lighten($color, 2%);
-  border-bottom: 1px solid darken($color, 2%);
+  border-top: 1px solid lighten($color, 5%);
+  border-bottom: 1px solid darken($color, 5%);
 }
 
 @mixin clearfix {

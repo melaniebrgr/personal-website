@@ -43,6 +43,8 @@ gulp.task('sass', function () {
 gulp.task('copy-img', function() {
   gulp.src('./app/img/*')
     .pipe( gulp.dest('./build/img'));  
+  gulp.src('./app/favicon.ico')
+    .pipe( gulp.dest('./build'));
 });
 
 gulp.task('copy-views', function() {
