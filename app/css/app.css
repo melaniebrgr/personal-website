@@ -592,6 +592,8 @@ body {
     text-align: left; }
     .nav a {
       padding-left: 42px; }
+    .nav li.open {
+      border-right: 1px solid #dee1e4; }
   .nav_sub a:after {
     left: 14px; } }
 
@@ -603,6 +605,7 @@ body {
     overflow: auto;
     padding: 30px 42px; }
     .feature .headline h1 {
+      color: #dee1e4;
       font-size: 4.2rem; }
     .feature .headline h2 {
       color: #f7f7f8;
@@ -802,10 +805,6 @@ article .tech {
   .headshot {
     top: -36px; } }
 
-@media screen and (max-width: 617px) {
-  .headshot {
-    top: -14px; } }
-
-@media screen and (max-width: 462px) {
+@media screen and (max-width: 700px) {
   .headshot {
     display: none; } }

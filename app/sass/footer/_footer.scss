@@ -42,14 +42,20 @@
 	}
 }
 
-@media screen and (max-width: 617px) {
-	.headshot {
-    top: -14px;
-	}
-}
-
-@media screen and (max-width: 462px) {
+@media screen and (max-width: $md-ish) {
 	.headshot {
     display: none;
 	}
 }
+
+// @media screen and (max-width: 617px) {
+// 	.headshot {
+//     top: -14px;
+// 	}
+// }
+
+// @media screen and (max-width: 462px) {
+// 	.headshot {
+//     display: none;
+// 	}
+// }

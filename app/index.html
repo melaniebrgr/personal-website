@@ -24,7 +24,7 @@
     			<div class="logo"><a href="#/"><svg id="path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300"><defs><linearGradient id="linear-gradient" x1="150.5" y1="0.907" x2="150.5" y2="300.907" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f16267"/><stop offset="1" stop-color="#ef4765"/></linearGradient></defs><title>logo</title><polygon points="300.5 300 0.5 300 0.5 0 150.5 112.5 300.5 0 300.5 300" fill="url(#linear-gradient)"/></svg></a></div>
           <nav class="nav">
     				<ul>
-    					<li class="nav_sub"><a href="#">Front-End Web Development</a></li>
+    					<li class="nav_sub fewd"><a href="#">Front-End Web Development</a></li>
               <li>
                 <ul>
                   <li><a href="#/gctavatar">GCTAvatar</a></li>
@@ -75,6 +75,9 @@
             $(this).toggleClass('active');
             $(this).next().toggleClass('open');
           });
+          if ($('body').width() > 701) {
+            $('.nav_sub.fewd').click();
+          }         
         });
       </script>
     </body>
