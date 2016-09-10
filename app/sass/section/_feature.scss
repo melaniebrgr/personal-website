@@ -1,6 +1,7 @@
 @mixin feature-lg-txt {
 	color: $light-1;
 	font-size: $serif-lg;
+	margin-bottom: 0.4rem;
 }
 
 @mixin feature-sm-txt {
