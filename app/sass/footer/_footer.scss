@@ -14,8 +14,7 @@
 	margin-top: 3.9rem;
 	width: 93.3%;
 	li {
-		@include subtle-bevel-border;
-		border-left: 1px solid $mid-2;
+		border: $nav-border;
 		background-color: $mid-2;
 		display: inline-flex;
 		flex-grow: 1;

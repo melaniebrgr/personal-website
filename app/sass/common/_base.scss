@@ -41,6 +41,12 @@ $easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 $a-padding-vert: 15px;
 $a-padding-horz: 42px;
 
+// Spacing
+$icon-dist: 14px;
+
+// Border
+$nav-border: 1px solid $mid-2;
+
 // Mixins
 @mixin show {
 	border: 1px solid blue;
