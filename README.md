@@ -1,6 +1,6 @@
 # portfolio website
 
-## Getting started
+## getting started
 - Check npm version, 6.x.x works
 - Install gulp-cli (https://gulpjs.com/docs/en/getting-started/quick-start)
 - Install bower (https://bower.io/#getting-started)
