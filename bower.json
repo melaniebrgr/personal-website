@@ -1,0 +1,26 @@
+{
+  "name": "personal-website",
+  "description": "My portfolio website",
+  "main": "index.html",
+  "authors": [
+    "Melanie Burger"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "portfolio"
+  ],
+  "homepage": "https://github.com/melaniebrgr/portfolio01",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "angular": "^1.7.9",
+    "angular-route": "^1.7.9"
+  }
+}
