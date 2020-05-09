@@ -4,6 +4,7 @@
 		display: block;
 		padding: $a-padding-vert*2 $a-padding-horz;
 		text-decoration: none;
+
 		span {
 			&:first-of-type:before {
 				content: '';
@@ -15,6 +16,7 @@
 				padding-right: 4px;
 			}
 		}
+
 		&:hover {
 			background-color: $mid-2;
 			color: $dark-1;

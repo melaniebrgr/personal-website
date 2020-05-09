@@ -7,3 +7,6 @@
 - Install bower components (see bower.json)
 - build app: `$ gulp build`
 - start app: `$ gulp`
+
+## note
+- app.css is a generated file, do not modify by hand

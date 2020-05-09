@@ -603,15 +603,16 @@ body {
     overflow: auto;
     padding: 30px 42px; }
     .feature .headline h1 {
-      color: #dee1e4;
-      font-size: 4.2rem; }
-    .feature .headline h2 {
       color: #f7f7f8;
       font-size: 2.8rem;
       margin-bottom: 0.4rem; }
+    .feature .headline h2 {
+      color: #f7f7f8;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem; }
     .feature .headline p {
       color: #dee1e4;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       line-height: 1.58rem; }
   .feature .quote h2 {
     color: #f7f7f8;
@@ -709,10 +710,6 @@ article h3 {
 
 article h4 {
   font-size: 1.3rem;
-  margin: 30px 42px 15px 42px; }
-
-article h5 {
-  font-size: 1.3rem;
   margin-bottom: 7.5px; }
 
 article img {
@@ -760,13 +757,13 @@ article figcaption {
   padding: 15px 42px; }
 
 article .tech {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   margin: 15px 42px; }
   article .tech:after {
     content: "";
     display: table;
     clear: both; }
   article .tech li {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     background-color: #dee1e4;
     border-radius: 20px;
     color: #36393c;

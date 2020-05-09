@@ -29,7 +29,7 @@ article {
 	p {
 		font-size: $sans-sm;
 		margin: $a-padding-vert $a-padding-horz;
-		line-height: 1.58rem;
+    line-height: 1.6rem;
 	}
 	ol {
 		counter-reset: list;
@@ -74,6 +74,7 @@ article {
     @include clearfix;
     margin: $a-padding-vert $a-padding-horz;
     li {
+      font-family: $sans-serif-1;
       background-color: $mid-2;
       border-radius: 20px;
       color: $dark-1;

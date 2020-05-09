@@ -18,14 +18,19 @@
 		overflow: auto;
 		padding: $a-padding-vert*2 $a-padding-horz;		
 		h1 {
-			color: $mid-2;
-			font-size: $serif-xlg;
+			color: $light-1;
+			font-size: $serif-lg;
+			margin-bottom: 0.4rem;
 		}
 		h2 {
-			@include feature-lg-txt;
+			color: $light-1;
+			font-size: $sans-md;
+			margin-bottom: 0.6rem;
 		}
 		p {
-			@include feature-sm-txt;
+			color: $mid-2;
+			font-size: $serif-xsm;
+			line-height: 1.58rem;
 		}
 	}
 	.quote {

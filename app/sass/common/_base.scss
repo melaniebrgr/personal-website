@@ -26,7 +26,8 @@ $mono-1: "Courier New", Courier, monospace, monospace;
 // Font sizes
 $sans-sm: 1.1rem;
 $sans-md: 1.3rem;
-$serif-xsm: 1rem;
+$sans-lg: 1.8rem;
+$serif-xsm: 0.9rem;
 $serif-sm: 1.3rem;
 $serif-md: 1.8rem;
 $serif-lg: 2.8rem;
@@ -72,12 +73,12 @@ $nav-border: 1px solid $mid-2;
 
 // Project-wide base styles
 html {
-	font-family: $sans-serif-1;
+	font-family: $serif-1;
 	color: $dark-1;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $serif-1;
+	font-family: $sans-serif-1;
 }
 
 body {
