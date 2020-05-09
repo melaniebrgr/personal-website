@@ -428,11 +428,11 @@ textarea {
   overflow: auto; }
 
 html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
   color: #36393c; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, "Times New Roman", serif; }
+  font-family: Avenir, Helvetica, Arial, sans-serif; }
 
 body {
   background-color: #f7f7f8; }
@@ -539,6 +539,7 @@ body {
     text-align: center; } }
 
 .nav {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   font-weight: 100;
   line-height: 1.5rem;
@@ -708,6 +709,10 @@ article h3 {
 
 article h4 {
   font-size: 1.3rem;
+  margin: 30px 42px 15px 42px; }
+
+article h5 {
+  font-size: 1.3rem;
   margin-bottom: 7.5px; }
 
 article img {
@@ -716,7 +721,7 @@ article img {
 article p {
   font-size: 1.1rem;
   margin: 15px 42px;
-  line-height: 1.58rem; }
+  line-height: 1.6rem; }
 
 article ol {
   counter-reset: list;
@@ -755,6 +760,7 @@ article figcaption {
   padding: 15px 42px; }
 
 article .tech {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   margin: 15px 42px; }
   article .tech:after {
     content: "";
