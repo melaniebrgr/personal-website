@@ -1,13 +1,7 @@
-// IDE
-portfolio01.sublime-project
-portfolio01.sublime-workspace
-.vscode/
-.bowerrc
-
-// Development
 _dev/
 build/
 node_modules/
+bower_components/
 app/bower_components/
 
 // Don't add my CV to remote repo
