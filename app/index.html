@@ -27,23 +27,23 @@
     					<li class="nav_sub fewd"><a href="#">Web Development</a></li>
               <li>
                 <ul>
-                  <li><a href="#!/gctavatar">GCTAvatar</a></li>
-                  <li><a href="#!/lab3d">Lab<sub>3</sub>D</a></li>          
-                  <li><a href="#!/cocktailsquiz">Cocktails Quiz</a></li>
-                  <li><a href="#!/shoppinglist">Shopping List</a></li>
-                  <li><a href="#!/symptomsleuth">Symptom Sleuth</a></li>
+                  <li class="nav_link"><a href="#!/gctavatar">GCTAvatar</a></li>
+                  <li class="nav_link"><a href="#!/lab3d">Lab<sub>3</sub>D</a></li>          
+                  <li class="nav_link"><a href="#!/cocktailsquiz">Cocktails Quiz</a></li>
+                  <li class="nav_link"><a href="#!/shoppinglist">Shopping List</a></li>
+                  <li class="nav_link"><a href="#!/symptomsleuth">Symptom Sleuth</a></li>
                 </ul>
               </li>
     					<li class="nav_sub"><a href="#">Design &amp; Visual Communication</a></li>
               <li>
                 <ul>
-                  <li><a href="#!/apliaredesign">Aplia redesign</a></li>
-                  <li><a href="#!/naturecover">Nature cover</a></li>
+                  <li class="nav_link"><a href="#!/apliaredesign">Aplia redesign</a></li>
+                  <li class="nav_link"><a href="#!/naturecover">Nature cover</a></li>
                   <!-- <li><a href="#/externalvisualfield">External visual field</a></li> -->
                   <!-- <li><a href="#/cerebralbloodflow">Cerebral blood flow</a></li>  -->
                 </ul>
               </li>              
-    					<li><a href="#!/writingandspeaking">Writing &amp; Speaking</a></li>
+    					<li class="nav_link"><a href="#!/writingandspeaking">Writing &amp; Speaking</a></li>
     					<!-- <li><a href="#/experiments">Experiments</a></li> -->
     					<!-- <li><a href="#/readingnotes">Reading Notes</a></li> -->
     				</ul>
@@ -75,6 +75,10 @@
             e.preventDefault();
             $(this).toggleClass('active');
             $(this).next().toggleClass('open');
+          });
+          $('.nav_link').click(function(e) {
+            $('.nav_link.active').removeClass('active');
+            $(this).addClass('active');
           });
           if ($('body').width() > 701) {
             $('.nav_sub.fewd').click();

@@ -574,6 +574,9 @@ body {
   .nav_sub + li a {
     background-color: #fcfcfd; }
 
+.nav_link.active a {
+  color: #f24665; }
+
 @media screen and (max-width: 700px) {
   .nav {
     text-align: left; }

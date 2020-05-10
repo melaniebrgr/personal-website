@@ -60,6 +60,10 @@
 	}
 }
 
+.nav_link.active a {
+	color: $accent-2;
+}
+
 
 @media screen and (max-width: $md-ish) {
 	.nav {
