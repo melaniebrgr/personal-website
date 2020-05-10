@@ -775,6 +775,7 @@ article .tech {
   margin-top: 3.9rem;
   width: 93.3%; }
   .social-media li {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     border: 1px solid #dee1e4;
     background-color: #dee1e4;
     display: inline-flex;

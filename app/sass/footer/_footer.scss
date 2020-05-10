@@ -7,6 +7,7 @@
 		width: 100%;
 	}
 }
+
 .social-media {
 	display: flex;
 	flex-wrap: wrap;
@@ -14,6 +15,7 @@
 	margin-top: 3.9rem;
 	width: 93.3%;
 	li {
+		font-family: $sans-serif-1;
 		border: $nav-border;
 		background-color: $mid-2;
 		display: inline-flex;
@@ -31,6 +33,7 @@
 		}
 	}
 }
+
 .copyright {
 	color: $dark-1;
 	padding: $a-padding-vert 0;
@@ -53,15 +56,3 @@
 		padding-left: 2rem;
 	}	
 }
-
-// @media screen and (max-width: 617px) {
-// 	.headshot {
-//     top: -14px;
-// 	}
-// }
-
-// @media screen and (max-width: 462px) {
-// 	.headshot {
-//     display: none;
-// 	}
-// }
