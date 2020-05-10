@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "My portfolio website",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "aws s3 cp build s3://melaniebrgr.com --recursive --profile melaniebrgr.com"
+  },
   "author": "Melanie Burger",
   "license": "ISC",
   "engines" : { "node" : "6.17.1" },
