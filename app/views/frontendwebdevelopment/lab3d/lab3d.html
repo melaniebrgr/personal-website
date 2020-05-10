@@ -1,8 +1,7 @@
 <div class="feature">
   <header class="headline">
     <h1>Lab<sub>3</sub>D</h1>
-    <h2>A platform for showcasing visualizations of organic chemistry reactions</h2>
-    <p class="date">June 15, 2014</p>
+    <h2>Interactive visualizations of organic chemistry reactions</h2>
   </header>
 </div>
 <article class="fewd">
@@ -14,9 +13,10 @@
     <li>Angular 1</li>
     <li>ChemDoodle</li>
   </ul>
+  <p class="date">June 15, 2014</p>
   <h3>Introduction</h3>
-  <p>Lab<sub>3</sub>D was completed towards the requirements of a Master's in <a href="https://bmc.med.utoronto.ca/bmc/" target="_blank">Biomedical Communications</a> (MScBMC). A MScBMC is a professional degree in the visual communication of science. The goal of the project was to develop a platform showcasing visualizations of organic chemistry reaction taught at the undergraduate level.</p>
-  <p>A significant challenge in learning chemistry is that the principle players are invisible to the human eye, requiring powerful instrumentation in order to be observed. A number of different methods of representing chemical data have emerged as a result, and responsibility falls to the student to synthesize the layers of data into a “whole picture”. Studies have shown that the difference between “experts” and “beginners” in chemistry is visualization capacity, however, the chemistry education community continues to be underserved by scientific artists compared to the disciplines of biology and medicine. There a few exceptions worth mentioning:</p>
+  <p>Lab<sub>3</sub>D was a requirement of my Master's in <a href="https://bmc.med.utoronto.ca/bmc/" target="_blank">Biomedical Communications</a> (MScBMC). A MScBMC is a professional degree in the visual communication of science. The goal of the project was to develop a platform showcasing visualizations of organic chemistry reaction taught at the undergraduate level.</p>
+  <p>A significant challenge in learning chemistry is that the main characters are invisible to the eye, can only be "observed" with powerful instrumentation. A number of styles of representing chemical data have emerged as a result, and it ultimately falls to the student to cognitively assemble multiple layers of data into a “whole picture”. It's been shown that a difference between “experts” and “beginners” in chemistry is this visualization capacity, however there are few scientific artists working in chemistry education compared to biology and medicine to help develop this capacity. A few notable exceptions:</p>
   <ol>
   	<li>the 1948 “<a href="https://paulingblog.wordpress.com/2015/07/02/the-architecture-of-molecules/" target="_blank">Architecture of Molecules</a>” book of molecular illustrations by Roger Hayward and Linus Pauling</li>
   	<li>David Goodsell’s cellular-level <a href="http://mgl.scripps.edu/people/goodsell/illustration/public" target="_blank">watercolour paintings</a></li>
@@ -24,18 +24,18 @@
   </ol>
   <p>My goal for Lab<sub>3</sub>D was to combine synchronized, multiple representations of chemical reactions in a single view. For each reaction there is an overall reaction word and Lewis structure equations, a 3D interactive animation, a reaction coordinate graph, and textual descriptions. In this way students would be able to compare and contrast multiple representations simultaneously and, hopefully, better form a mental model of the whole.</p>
   <h3>Approach</h3>
-  <p>I considered creating an ebook with iBooks author, but ultimately preferred the web as a publishing platform because of the number of tools I could leverage and because it enabled broader distribution. To display molecular graphics I use ChemDoodle Web Components (CWC), a javascript library for chemical graphics, interfaces and informatics. Following the conclusion of this project I was invited by iChemLabs to write <a href="http://jcheminf.springeropen.com/articles/10.1186/s13321-015-0085-3" target="_blank">a review of CWC</a> which was published last year in the Journal of Cheminformatics (Figure 1).</p>
+  <p>I looked at creating an ebook with iBooks author, but ultimately preferred the web as a platform because of the number of tools I could leverage and because it enabled broader distribution. To display molecular graphics I used ChemDoodle Web Components (CWC), a javascript library for chemical graphics, interfaces and informatics. Following the conclusion of this project I wrote <a href="http://jcheminf.springeropen.com/articles/10.1186/s13321-015-0085-3" target="_blank">a review of CWC</a> which was published in the Journal of Cheminformatics (Figure 1).</p>
   <figure>
     <img src="views/frontendwebdevelopment/lab3d/fig1.jpg" alt="" />
     <figcaption>Figure 1. Graphical abstract for ChemDoodle Web Components <a href="http://jcheminf.springeropen.com/articles/10.1186/s13321-015-0085-3" target="_blank">review article</a>.</figcaption>
   </figure>  
   <h3>Challenges</h3> 
-  <p><span class="challenge-number">1</span>My web development experience up to that point was creating Geocities websites in elementary school (viewing source and copying code). In order to build <a href="http://www.lab3d.io/old/" target="_blank">Lab<sub>3</sub>D v1</a> I took a summer javascript course that used Marijn Haverbeke’s “<a href="http://eloquentjavascript.net/" target="_blank">Eloquent Javascript</a>” as a textbook (which I would highly recommend to other beginners) and read blog posts and other books to learn HTML5 and CSS. CSS which was completely new – my geocities sites used inline styles – and Ethan Marcotte’s book on responsive web design was eye-opening and another strong signal of how much the web had changed. Lab<sub>3</sub>D v1 was completed in July 2013 in time to graduate and present the project at the Gordon Research Conference on “Visualization in Science and Education”.</p>   
-  <p><span class="challenge-number">2</span>After completing the v1 of the project in 2013 it was clear that the current approach of adding and displaying chemical data was not very robust. For every new reaction I would need to copy template HTML markup and manually enter values and links. To solve this, I decide to refactor Lab<sub>3</sub>D into an AngularJS app, extracting reaction information into a JSON file. I have to credit local meet-ups, Code School, ngBook and the Angular docs for being excellent resources for learning AngularJS. I completed Lab<sub>3</sub>D v2 in time to present at the 2015 International Conference on Chemistry Education (Figure 2) and have heard since heard from a handful professors since then that they use the resource in the classroom.</p>
-<!--   <figure>
+  <p><span class="challenge-number">1</span>My web development experience up to that point was in elementary school with Geocities, basically viewing source and copying code. In order to build <a href="http://www.lab3d.io/old/" target="_blank">Lab<sub>3</sub>D v1</a> I took a course in javascript that followed Marijn Haverbeke’s “<a href="http://eloquentjavascript.net/" target="_blank">Eloquent Javascript</a>”, and read blog posts and other books to learn HTML5 and CSS. CSS which was completely new – my geocities sites used inline styles – and Ethan Marcotte’s book on responsive web design was eye-opening. Lab<sub>3</sub>D v1 was completed in July 2013 in time to graduate and present the project at the Gordon Research Conference on “Visualization in Science and Education”.</p>   
+  <p><span class="challenge-number">2</span>After completing the v1 of the project in 2013 it was clear that the current approach of adding and displaying chemical data was not very robust. For every new reaction I would need to copy template HTML markup and manually enter values and links. To solve this, I decide to migrate Lab<sub>3</sub>D into an Angular app, extracting reaction information into a JSON file. I have to credit local meet-ups, Code School, ngBook and the Angular docs for helping me learn AngularJS. I completed Lab<sub>3</sub>D v2 in time to present at the 2015 International Conference on Chemistry Education (Figure 2) and have heard since heard from professors that they used the resource in their classroom.</p>
+  <figure>
 	<iframe src="//slides.com/mbrgr/icce2014/embed?style=light" width="100%" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   	<figcaption>Figure 2. ICCE 2015 presentation slides.</figcaption>
-  </figure> -->
-  <h3>Next steps</h3>
+  </figure>
+  <h3>What would I have done next?</h3>
   <p>To make it a more meaningful resource the reaction library needs to be expanded. The next step would be to set up a database and backend server to enable user contribution of molecular data. Contributing to an online resource of chemical reaction visualizations would be a great project for students studying computational chemistry.</p>
 </article>
