@@ -496,27 +496,16 @@ body {
     height: initial; }
   .feature,
   .feature canvas {
-    height: 17rem; }
+    height: 23rem; }
   .footer {
     padding: 0; } }
 
 @media screen and (max-width: 350px) {
-  .feature {
-    height: 16rem; }
-    .feature canvas {
-      height: 16rem; }
-    .feature footer {
-      display: none; } }
-
-@media screen and (max-width: 320px) {
   .feature,
   .feature canvas {
-    height: 18rem; } }
-
-@media screen and (max-width: 296px) {
-  .feature,
-  .feature canvas {
-    height: 22rem; } }
+    height: 23rem; }
+  footer {
+    display: none; } }
 
 .header {
   border-right: 1px solid #dee1e4; }

@@ -78,7 +78,7 @@ body {
 	}
 	.feature,
 	.feature canvas {
-		height: 17rem;
+		height: 23rem;
 	}
 	.footer {
 		padding: 0;
@@ -86,27 +86,11 @@ body {
 }
 
 @media screen and (max-width: $sm-ish) { 
-	.feature {
-		height: 16rem;
-		canvas {
-			height: 16rem;
-		}
-		footer {
-			display: none;
-		}
-	}
-}
-
-@media screen and (max-width: 320px) {
 	.feature,
 	.feature canvas {
-		height: 18rem;
+		height: 23rem;
 	}
-}
-
-@media screen and (max-width: 296px) {
-	.feature,
-	.feature canvas {
-		height: 22rem;
+	footer {
+		display: none;
 	}
 }
